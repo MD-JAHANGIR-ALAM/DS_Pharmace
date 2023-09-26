@@ -8,7 +8,8 @@ import 'package:get_storage/get_storage.dart';
 
 import '../controllers/dashboard_controller.dart';
 import '../customs/custom_message_button.dart';
-import '../pages/refer_pacent/refer_doctor_list.dart';
+import '../pages/refer_doctor_list.dart';
+
 import '../routes/routes.dart';
 import '../utils/colors_code.dart';
 import '../utils/styles.dart';
@@ -385,13 +386,13 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Get.find<DashboardController>()
-                                    .todayAppoinment();
-                                Get.find<DashboardController>()
-                                    .offlineAppoinment();
-                                Get.find<DashboardController>()
-                                    .emergencyAppoinment();
-                                Get.toNamed(RouteManeger.todayAppoinmentList);
+                                // Get.find<DashboardController>()
+                                //     .todayAppoinment();
+                                // Get.find<DashboardController>()
+                                //     .offlineAppoinment();
+                                // Get.find<DashboardController>()
+                                //     .emergencyAppoinment();
+                                // Get.toNamed(RouteManeger.todayAppoinmentList);
                               },
                               child: Container(
                                   height: 40,

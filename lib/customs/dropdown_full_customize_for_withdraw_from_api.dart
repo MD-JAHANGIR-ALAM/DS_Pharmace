@@ -83,7 +83,7 @@ class FullCustomDropdownButtonForWithdrawFromApi extends StatelessWidget {
                           ),
                         ),
                   isExpanded: true,
-                  iconSize: 30.0,
+                  // iconSize: 30.0,
                   items: titleList!.map(
                     (val) {
                       return DropdownMenuItem<String>(

@@ -35,7 +35,24 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  get: ^4.6.6
+  get: ^4.6.5
+  device_preview: ^1.1.0
+  google_fonts:
+  intl:
+  get_storage: ^2.0.3
+  sms_autofill: ^2.2.0
+  carousel_slider: ^4.1.1
+  shimmer: ^2.0.0
+  flutter_rating_bar: ^4.0.1
+  auto_reload: ^1.1.0
+  image_picker: ^0.8.6
+  http: ^0.13.5
+  flutter_svg: ^1.1.6
+  multiselect_formfield: ^0.1.7
+  toggle_switch: ^2.0.1
+  dropdown_button2: ^1.0.0
+  dropdown_search: ^3.0.1
+  syncfusion_flutter_pdfviewer:
 
 dev_dependencies:
   flutter_test:

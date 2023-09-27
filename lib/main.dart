@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'pages/homepage.dart';
 
 void main() {
-  runApp(const MyAPP());
+  runApp(MyAPP());
 }
 
 class MyAPP extends StatelessWidget {
@@ -9,7 +10,12 @@ class MyAPP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      title: "DS Pharmacy",
+      debugShowCheckedModeBanner: false,
+      home: HomePage()
+    );
   }
 }
+
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/colors_code.dart';
+import 'drawer_page/drawer_page.dart';
 
 
 class Profile_Info extends StatefulWidget {
@@ -17,6 +18,10 @@ class _Profile_InfoState extends State<Profile_Info> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _drawer,
+      drawer: Drawer(
+        child: MainDrawer(),
+      ),
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: ColorsCode.primary_color,

@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 
 import '../../utils/colors_code.dart';
 import '../../utils/styles.dart';
+import '../create_branch.dart';
 import '../personal_information.dart';
 
 
@@ -218,6 +219,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBranch()));
                               },
                               child: Container(
                                   height: 40,
@@ -261,7 +263,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                       Padding(
                                         padding:
                                         const EdgeInsets.only(left: 14),
-                                        child: Text('CHAMBER LIST',
+                                        child: Text('CREATE BRANCH',
                                             // style: widget.ischamberListSelected
                                             //     ? Style
                                             //     .drawer_button_selected_style

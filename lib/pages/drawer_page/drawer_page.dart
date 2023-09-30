@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 
 import '../../utils/colors_code.dart';
 import '../../utils/styles.dart';
+import '../personal_information.dart';
 
 
 class MainDrawer extends StatefulWidget {
@@ -42,6 +43,9 @@ class MainDrawer extends StatefulWidget {
 }
 
 class _MainDrawerState extends State<MainDrawer> {
+
+  bool home = true;
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -116,9 +120,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
                                         bottomLeft: Radius.circular(100)),
-                                    // color: widget.isHomeSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
+                                    color: home == true
+                                        ? Color(0xffffffff)
+                                        : Color(0xff464645),
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -129,9 +133,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
-                                          // color: widget.isHomeSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
+                                          color: home == true
+                                              ? Colors.green
+                                              : Color(0xff464645),
                                         ),
                                         child: ClipRRect(
                                             borderRadius:
@@ -150,10 +154,10 @@ class _MainDrawerState extends State<MainDrawer> {
                                         padding:
                                         const EdgeInsets.only(left: 14),
                                         child: Text('HOME',
-                                            // style: widget.isHomeSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
+                                            style: home == true
+                                                ? Style
+                                                .drawer_button_selected_style
+                                                : Style.drawer_button_style
                                         ),
                                       )
                                     ],
@@ -161,6 +165,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile_Info()));
                               },
                               child: Container(
                                   height: 40,

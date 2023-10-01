@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/styles.dart';
 import '../create_branch.dart';
+import '../order_page/order_page.dart';
 import '../personal_information.dart';
 
 
@@ -275,6 +276,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
                               },
                               child: Container(
                                   height: 40,

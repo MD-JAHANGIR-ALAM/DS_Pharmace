@@ -9,6 +9,7 @@ import '../../utils/colors_code.dart';
 import '../../utils/styles.dart';
 import '../create_branch.dart';
 import '../personal_information.dart';
+import '../staff_page/staff_list.dart';
 import '../staff_page/staff_page.dart';
 
 
@@ -332,6 +333,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffList()));
                               },
                               child: Container(
                                   height: 40,
@@ -375,7 +377,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                       Padding(
                                         padding:
                                         const EdgeInsets.only(left: 14),
-                                        child: Text('FEE SETUP',
+                                        child: Text('STAFF LIST',
                                             // style: widget.isFeeSetupSelected
                                             //     ? Style
                                             //     .drawer_button_selected_style

@@ -45,3 +45,50 @@ class _DDButtonState extends State<DDButton> {
     );
   }
 }
+
+
+class Custom_DDButton extends StatefulWidget {
+  const Custom_DDButton({super.key});
+
+  @override
+  State<Custom_DDButton> createState() => _Custom_DDButtonState();
+}
+
+class _Custom_DDButtonState extends State<Custom_DDButton> {
+
+  final items = <String>['Male', 'Female', 'Others'];
+
+  String? valueChoose;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(
+          Radius.circular(12),
+        ),
+        border: Border.all(color: ColorsCode.text_border_color),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10),
+        child: DropdownButton(
+            underline: SizedBox(),
+            isExpanded: true,
+            icon: Icon(Icons.arrow_drop_down),
+            iconSize: 35,
+            hint: Text("Select"),
+            value: valueChoose,
+            onChanged: (newValue) {
+              setState(() {
+                valueChoose = newValue;
+              });
+            },
+            items: items.map((valueItem) {
+              return DropdownMenuItem(value: valueItem, child: Text(valueItem));
+            }).toList()),
+      ),
+    );
+  }
+}
+

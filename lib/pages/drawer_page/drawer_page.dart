@@ -8,8 +8,8 @@ import 'package:get/get.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/styles.dart';
 import '../create_branch.dart';
-import '../order_page/order_page.dart';
 import '../personal_information.dart';
+import '../staff_page/staff_page.dart';
 
 
 class MainDrawer extends StatefulWidget {
@@ -276,7 +276,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffPage()));
                               },
                               child: Container(
                                   height: 40,
@@ -320,7 +320,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                       Padding(
                                         padding:
                                         const EdgeInsets.only(left: 14),
-                                        child: Text('SCHEDULE',
+                                        child: Text('STAFF SETUP',
                                             // style: widget.isScheduleSelected
                                             //     ? Style
                                             //     .drawer_button_selected_style

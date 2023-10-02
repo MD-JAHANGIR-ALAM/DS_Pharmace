@@ -1,10 +1,9 @@
+import 'package:ds_pharmace/pages/order_page/sub_page_1.dart';
+import 'package:ds_pharmace/pages/order_page/sub_page_2.dart';
 import 'package:flutter/material.dart';
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/styles.dart';
-import '../drawer_page/drawer_page.dart';
-import 'complete.dart';
-import 'waiting_and_confirm.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({super.key});
@@ -55,6 +54,8 @@ class _OrderPageState extends State<OrderPage> {
         child: DefaultTabController(
           length: 2,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
                 height: 50,
@@ -63,31 +64,34 @@ class _OrderPageState extends State<OrderPage> {
                     color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                 ),
               ),
-              Text("Order", style: Style.dashboardBlackText700,),
-              ButtonsTabBar(
-                backgroundColor: Colors.red,
-                unselectedBackgroundColor: Colors.grey[300],
-                unselectedLabelStyle: TextStyle(color: Colors.black),
-                labelStyle:
-                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                tabs: [
-                  Tab(
-                    child: Text("Waiting to Confirm/\nAssign to Heroboy"),
-                  ),
-                  Tab(
-                    child: Text("Complete"),
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Text("Order", style: Style.dashboardBlackText700,),
+              ),
+              Divider(
+                height: 3,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: ButtonsTabBar(
+                  backgroundColor: ColorsCode.primary_color,
+                  labelStyle:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  tabs: [
+                    Tab(
+                      child: Text("Waiting to Confirm/\nAssign to Heroboy", style: TextStyle(color: Colors.black),),
+                    ),
+                    Tab(
+                      child: Text("Complete", style: TextStyle(color: Colors.black)),
+                    ),
+                  ],
+                ),
               ),
               Expanded(
                 child: TabBarView(
                   children: <Widget>[
-                    Center(
-                      child: Icon(Icons.directions_car),
-                    ),
-                    Center(
-                      child: Icon(Icons.directions_transit),
-                    ),
+                    SubPage_1(),
+                    SubPage_2(),
                   ],
                 ),
               ),

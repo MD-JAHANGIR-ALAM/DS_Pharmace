@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../utils/colors_code.dart';
+import '../utils/images.dart';
 import '../utils/styles.dart';
 import 'drawer_page/drawer_page.dart';
-
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -27,9 +27,19 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: ColorsCode.primary_color,
         bottomOpacity: 0.0,
         elevation: 0.0,
-        leading: IconButton(onPressed: (){
-          _drawer.currentState!.openDrawer();
-        }, icon: Icon(Icons.menu, size: 25,)),
+        title: Image.asset(
+          Images.logo,
+          scale: 25,
+          color: Colors.white,
+        ),
+        leading: IconButton(
+            onPressed: () {
+              _drawer.currentState!.openDrawer();
+            },
+            icon: Icon(
+              Icons.menu,
+              size: 25,
+            )),
         actions: <Widget>[
           IconButton(
             icon: Stack(
@@ -47,10 +57,8 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
-            onPressed: () {
-            },
+            onPressed: () {},
           ),
-
         ],
       ),
       body: Column(
@@ -59,10 +67,30 @@ class _HomePageState extends State<HomePage> {
             height: 150,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+              color: ColorsCode.primary_color,
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10)),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.account_circle,
+                  size: 80,
+                  color: Colors.white,
+                ),
+                Text(
+                  "Jahangir",
+                  style: TextStyle(
+                      color: Colors.white, fontSize: 20, fontFamily: "Roboto"),
+                )
+              ],
             ),
           ),
-          SizedBox(height: 15,),
+          SizedBox(
+            height: 15,
+          ),
           CarouselSlider.builder(
               itemCount: 5,
               itemBuilder: (context, index, realIndex) {
@@ -73,12 +101,13 @@ class _HomePageState extends State<HomePage> {
                 );
               },
               options: CarouselOptions(
-                height: MediaQuery.of(context).size.height *
-                    .12,
+                height: MediaQuery.of(context).size.height * .12,
                 autoPlay: true,
                 aspectRatio: 1 / 2,
               )),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -87,8 +116,7 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height * 0.16,
                 width: MediaQuery.of(context).size.width * 0.45,
                 decoration: BoxDecoration(
-                    color:
-                    ColorsCode.page_background_color, //E9F2F2
+                    color: ColorsCode.page_background_color, //E9F2F2
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: const [
                       BoxShadow(
@@ -99,12 +127,10 @@ class _HomePageState extends State<HomePage> {
                     ]),
                 child: Center(
                   child: InkWell(
-                    onTap: () {
-                    },
+                    onTap: () {},
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment:
-                      CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           "123",
@@ -119,11 +145,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              SizedBox(width: 10,),
+              SizedBox(
+                width: 10,
+              ),
               SizedBox(
                 child: Container(
-                  height:
-                  MediaQuery.of(context).size.height * 0.16,
+                  height: MediaQuery.of(context).size.height * 0.16,
                   width: MediaQuery.of(context).size.width * 0.45,
                   decoration: BoxDecoration(
                       color: const Color(0xff0097E6), //E9F2F2
@@ -136,14 +163,11 @@ class _HomePageState extends State<HomePage> {
                         )
                       ]),
                   child: InkWell(
-                    onTap: () {
-                    },
+                    onTap: () {},
                     child: Center(
                       child: Column(
-                        mainAxisAlignment:
-                        MainAxisAlignment.center,
-                        crossAxisAlignment:
-                        CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
                             "123",
@@ -169,12 +193,10 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 // ignore: unrelated_type_equality_checks
                 child: Container(
-                  height:
-                  MediaQuery.of(context).size.height * 0.16,
+                  height: MediaQuery.of(context).size.height * 0.16,
                   width: MediaQuery.of(context).size.width * 0.45,
                   decoration: BoxDecoration(
-                      color: ColorsCode
-                          .snackbar_error_color, //E9F2F2
+                      color: ColorsCode.snackbar_error_color, //E9F2F2
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: const [
                         BoxShadow(
@@ -184,14 +206,11 @@ class _HomePageState extends State<HomePage> {
                         )
                       ]),
                   child: InkWell(
-                    onTap: () {
-                    },
+                    onTap: () {},
                     child: Center(
                       child: Column(
-                        mainAxisAlignment:
-                        MainAxisAlignment.center,
-                        crossAxisAlignment:
-                        CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
                             "123",
@@ -213,12 +232,10 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 // ignore: unrelated_type_equality_checks
                 child: Container(
-                  height:
-                  MediaQuery.of(context).size.height * 0.16,
+                  height: MediaQuery.of(context).size.height * 0.16,
                   width: MediaQuery.of(context).size.width * 0.45,
                   decoration: BoxDecoration(
-                      color: ColorsCode
-                          .page_background_color, //E9F2F2
+                      color: ColorsCode.page_background_color, //E9F2F2
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: const [
                         BoxShadow(
@@ -228,12 +245,10 @@ class _HomePageState extends State<HomePage> {
                         )
                       ]),
                   child: InkWell(
-                    onTap: () {
-                    },
+                    onTap: () {},
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment:
-                      CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           "123",
@@ -256,18 +271,18 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 SizedBox(
-                  // ignore: unrelated_type_equality_checks
+                    // ignore: unrelated_type_equality_checks
                     child: Text(
-                      'Be a Donor',
-                      style: Style.dashboardBlackText400,
-                    )),
+                  'Be a Donor',
+                  style: Style.dashboardBlackText400,
+                )),
                 const Spacer(),
                 SizedBox(
-                  // ignore: unrelated_type_equality_checks
+                    // ignore: unrelated_type_equality_checks
                     child: Text(
-                      'See all',
-                      style: Style.block_text_style,
-                    )),
+                  'See all',
+                  style: Style.block_text_style,
+                )),
               ],
             ),
           ),
@@ -278,82 +293,69 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  // ignore: unrelated_type_equality_checks
+                    // ignore: unrelated_type_equality_checks
                     child: GestureDetector(
-                      onTap: (){
-                      },
-                      child: Container(
-                        height: MediaQuery.of(context).size.height *
-                            0.16,
-                        width: MediaQuery.of(context).size.width *
-                            0.45,
-                        decoration: BoxDecoration(
-                            color: ColorsCode
-                                .page_background_color, //E9F2F2
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 6,
-                                offset: Offset(0, 2),
-                              )
-                            ]),
-                        child: Column(
-                          mainAxisAlignment:
-                          MainAxisAlignment.center,
-                          crossAxisAlignment:
-                          CrossAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/images/blooddonation.png',
-                            ),
-                            const Text(
-                              'Bload donation',
-                            ),
-                          ],
+                  onTap: () {},
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.16,
+                    width: MediaQuery.of(context).size.width * 0.45,
+                    decoration: BoxDecoration(
+                        color: ColorsCode.page_background_color, //E9F2F2
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.black12,
+                            blurRadius: 6,
+                            offset: Offset(0, 2),
+                          )
+                        ]),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/images/blooddonation.png',
                         ),
-                      ),
-                    )
-                ),
+                        const Text(
+                          'Bload donation',
+                        ),
+                      ],
+                    ),
+                  ),
+                )),
                 const SizedBox(
                   width: 10,
                 ),
                 SizedBox(
-                  // ignore: unrelated_type_equality_checks
-                  child: GestureDetector(
-                    onTap: (){
-                    },
-                    child: Container(
-                      height:
-                      MediaQuery.of(context).size.height * 0.16,
-                      width:
-                      MediaQuery.of(context).size.width * 0.45,
-                      decoration: BoxDecoration(
-                          color: ColorsCode
-                              .page_background_color, //E9F2F2
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 6,
-                              offset: Offset(0, 2),
-                            )
-                          ]),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment:
-                        CrossAxisAlignment.center,
-                        children: [
-                          Image.asset('assets/images/donation.png'),
-                          const Text(
-                            'Donation',
-                            style: Style.dashboardBlackText400,
-                          ),
-                        ],
-                      ),
+                    // ignore: unrelated_type_equality_checks
+                    child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.16,
+                    width: MediaQuery.of(context).size.width * 0.45,
+                    decoration: BoxDecoration(
+                        color: ColorsCode.page_background_color, //E9F2F2
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.black12,
+                            blurRadius: 6,
+                            offset: Offset(0, 2),
+                          )
+                        ]),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/images/donation.png'),
+                        const Text(
+                          'Donation',
+                          style: Style.dashboardBlackText400,
+                        ),
+                      ],
                     ),
-                  )
-                ),
+                  ),
+                )),
               ],
             ),
           ),
@@ -362,5 +364,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-

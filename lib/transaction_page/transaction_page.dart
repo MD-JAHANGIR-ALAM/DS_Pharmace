@@ -1,22 +1,13 @@
-import 'package:ds_pharmace/pages/drawer_page/drawer_page.dart';
-import 'package:ds_pharmace/pages/order_page/sub_page_1.dart';
-import 'package:ds_pharmace/pages/order_page/sub_page_2.dart';
-import 'package:flutter/material.dart';
 import 'package:buttons_tabbar/buttons_tabbar.dart';
-import '../../utils/colors_code.dart';
-import '../../utils/images.dart';
-import '../../utils/styles.dart';
+import 'package:flutter/material.dart';
 
+import '../pages/drawer_page/drawer_page.dart';
+import '../utils/colors_code.dart';
+import '../utils/images.dart';
+import '../utils/styles.dart';
 
-
-class OrderPage extends StatefulWidget {
-  const OrderPage({super.key});
-
-  @override
-  State<OrderPage> createState() => _OrderPageState();
-}
-
-class _OrderPageState extends State<OrderPage> {
+class TransactionPage extends StatelessWidget {
+  TransactionPage({super.key});
 
   final GlobalKey<ScaffoldState> _drawer = GlobalKey<ScaffoldState>();
 
@@ -24,7 +15,7 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawer,
-      drawer: Drawer(
+      drawer: const Drawer(
         child: MainDrawer(),
       ),
       appBar: AppBar(
@@ -42,8 +33,8 @@ class _OrderPageState extends State<OrderPage> {
         }, icon: Icon(Icons.menu, size: 25,)),
         actions: <Widget>[
           IconButton(
-            icon: Stack(
-              children: const [
+            icon: const Stack(
+              children: [
                 Icon(
                   Icons.notifications_none,
                   color: Colors.white,
@@ -78,12 +69,14 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 15),
-                child: Text("Order", style: Style.dashboardBlackText700,),
+                padding: const EdgeInsets.only(left: 15, top: 10),
+                child: Text("Transaction", style: Style.dashboardBlackText700,),
               ),
+              SizedBox(height: 5,),
               Divider(
                 height: 3,
               ),
+              SizedBox(height: 5,),
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
                 child: ButtonsTabBar(
@@ -93,23 +86,22 @@ class _OrderPageState extends State<OrderPage> {
                   tabs: [
                     Tab(
                       child: Container(
-                        width: MediaQuery.of(context).size.width / 2.4,
-                          child: Center(child: Text("Waiting to Confirm/\nAssign to Heroboy", style: TextStyle(color: Colors.black),))
+                          width: MediaQuery.of(context).size.width / 2.4,
+                          child: Center(child: Text("Complete", style: TextStyle(color: Colors.black),))
                       ),
                     ),
                     Tab(
                       child: Container(
                           width: MediaQuery.of(context).size.width / 2.4,
-                          child: Center(child: Text("Complete", style: TextStyle(color: Colors.black)))),
+                          child: Center(child: Text("Panding", style: TextStyle(color: Colors.black)))),
                     ),
                   ],
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: TabBarView(
                   children: <Widget>[
-                    SubPage_1(),
-                    SubPage_2(),
+                    //Input your page
                   ],
                 ),
               ),

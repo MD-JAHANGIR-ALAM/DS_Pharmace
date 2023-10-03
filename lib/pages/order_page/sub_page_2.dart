@@ -23,10 +23,14 @@ class SubPage_2 extends StatelessWidget {
                 TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 tabs: [
                   Tab(
-                    child: Text("By Seller", style: TextStyle(color: Colors.black),),
+                    child: Container(
+                        width: MediaQuery.of(context).size.width / 2.4,
+                        child: Center(child: Text("By Seller", style: TextStyle(color: Colors.black),))),
                   ),
                   Tab(
-                    child: Text("By Heroboy", style: TextStyle(color: Colors.black)),
+                    child: Container(
+                        width: MediaQuery.of(context).size.width / 2.4,
+                        child: Center(child: Text("By Heroboy", style: TextStyle(color: Colors.black)))),
                   ),
                 ],
               ),

@@ -30,4 +30,6 @@ class Images {
   static const String cameraIcon = 'assets/images/cameraIcon.svg';
   static const String galleryIcon = 'assets/images/galleryIcon.svg';
   static const String withDrawStatus = 'assets/images/withdraw_status.svg';
+  static const String taka = 'assets/images/taka.png';
+  static const String users = 'assets/images/profile.png';
 }

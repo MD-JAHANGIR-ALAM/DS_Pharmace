@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/colors_code.dart';
+import '../../utils/images.dart';
 import '../../utils/styles.dart';
 import '../drawer_page/drawer_page.dart';
 
@@ -21,6 +22,11 @@ class StaffList extends StatelessWidget {
         backgroundColor: ColorsCode.primary_color,
         bottomOpacity: 0.0,
         elevation: 0.0,
+        title: Image.asset(
+          Images.logo,
+          scale: 25,
+          color: Colors.white,
+        ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
         }, icon: Icon(Icons.menu, size: 25,)),
@@ -74,8 +80,8 @@ class StaffList extends StatelessWidget {
                             child: Card(
                               child: Column(
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(5.0),
+                                  const Padding(
+                                    padding: EdgeInsets.all(5.0),
                                     child: Row(
                                       children: [
                                         SizedBox(
@@ -89,7 +95,7 @@ class StaffList extends StatelessWidget {
                                           child: Column(
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 10),
+                                                padding: EdgeInsets.only(left: 10),
                                                 child: Row(
                                                   children: [
                                                     SizedBox(
@@ -108,7 +114,7 @@ class StaffList extends StatelessWidget {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 10),
+                                                padding: EdgeInsets.only(left: 10),
                                                 child: Row(
                                                   children: [
                                                     SizedBox(
@@ -127,7 +133,7 @@ class StaffList extends StatelessWidget {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 10),
+                                                padding: EdgeInsets.only(left: 10),
                                                 child: Row(
                                                   children: [
                                                     SizedBox(
@@ -146,7 +152,7 @@ class StaffList extends StatelessWidget {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(left: 10),
+                                                padding: EdgeInsets.only(left: 10),
                                                 child: Row(
                                                   children: [
                                                     SizedBox(
@@ -170,10 +176,19 @@ class StaffList extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    height: 30,
-                                    width: 80,
-
+                                  Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(right: 20),
+                                      child: Container(
+                                        height: 30,
+                                        width: 80,
+                                        decoration: BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(12))),
+                                        child: Center(
+                                          child: Text("Edit", style: TextStyle(color: Colors.white),),
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                   SizedBox(height: 5,)
                                 ],

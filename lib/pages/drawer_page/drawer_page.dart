@@ -5,12 +5,16 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../transaction_page/transaction_page.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/styles.dart';
 import '../create_branch.dart';
+import '../homepage.dart';
+import '../order_page/order_page.dart';
 import '../personal_information.dart';
 import '../staff_page/staff_list.dart';
 import '../staff_page/staff_page.dart';
+import '../wallet_page/wallet_page.dart';
 
 
 class MainDrawer extends StatefulWidget {
@@ -66,8 +70,8 @@ class _MainDrawerState extends State<MainDrawer> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        height: 320,
-                        width: 200,//Get.width*.3,
+                        height: 150,
+                        width: double.infinity,//Get.width*.3,
                         padding: const EdgeInsets.all(20),
                         color: const Color(0xff464645),
                         child: Center(
@@ -80,13 +84,13 @@ class _MainDrawerState extends State<MainDrawer> {
                               children: [
                                 Image.asset(
                                   "assets/images/logo_icon.png",
-                                  height: 200,
-                                  width: 30,
+                                  height: 100,
+                                  width: 50,
                                 ),
                                 Style.widthdistan_size2,
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: const [
                                     Text(
                                       "Digital Shastho",
@@ -116,6 +120,7 @@ class _MainDrawerState extends State<MainDrawer> {
                           child: Column(children: [
                             GestureDetector(
                               onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
                               },
                               child: Container(
                                   height: 40,
@@ -277,6 +282,286 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>WalletPage()));
+                              },
+                              child: Container(
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(100),
+                                        bottomLeft: Radius.circular(100)),
+                                    // color: widget.ischamberListSelected
+                                    //     ? Color(0xffffffff)
+                                    //     : Color(0xff464645),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 40,
+                                        width: 40,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                          BorderRadius.circular(100),
+                                          // color: widget.ischamberListSelected
+                                          //     ? Colors.green
+                                          //     : Color(0xff464645),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                          BorderRadius.circular(10),
+                                          child: Icon(
+                                            Icons.wallet,
+                                            color: Colors.white,
+                                            size: 30,
+                                          ),
+
+                                          // Image.asset(
+                                          //   "assets/icons/home.png",
+                                          //   width: 10,
+                                          //   height: 10,
+                                          // ), // no matter how big it is, it won't overflow
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                        const EdgeInsets.only(left: 14),
+                                        child: Text('WALLET',
+                                            // style: widget.ischamberListSelected
+                                            //     ? Style
+                                            //     .drawer_button_selected_style
+                                            //     : Style.drawer_button_style
+                                        ),
+                                      )
+                                    ],
+                                  )),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>TransactionPage()));
+                              },
+                              child: Container(
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(100),
+                                        bottomLeft: Radius.circular(100)),
+                                    // color: widget.ischamberListSelected
+                                    //     ? Color(0xffffffff)
+                                    //     : Color(0xff464645),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 40,
+                                        width: 40,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                          BorderRadius.circular(100),
+                                          // color: widget.ischamberListSelected
+                                          //     ? Colors.green
+                                          //     : Color(0xff464645),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                          BorderRadius.circular(10),
+                                          child: Icon(
+                                            Icons.crop,
+                                            color: Colors.white,
+                                            size: 30,
+                                          ),
+
+                                          // Image.asset(
+                                          //   "assets/icons/home.png",
+                                          //   width: 10,
+                                          //   height: 10,
+                                          // ), // no matter how big it is, it won't overflow
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                        const EdgeInsets.only(left: 14),
+                                        child: Text('TRANSACTION',
+                                            // style: widget.ischamberListSelected
+                                            //     ? Style
+                                            //     .drawer_button_selected_style
+                                            //     : Style.drawer_button_style
+                                        ),
+                                      )
+                                    ],
+                                  )),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
+                              },
+                              child: Container(
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(100),
+                                        bottomLeft: Radius.circular(100)),
+                                    // color: widget.ischamberListSelected
+                                    //     ? Color(0xffffffff)
+                                    //     : Color(0xff464645),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 40,
+                                        width: 40,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                          BorderRadius.circular(100),
+                                          // color: widget.ischamberListSelected
+                                          //     ? Colors.green
+                                          //     : Color(0xff464645),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                          BorderRadius.circular(10),
+                                          child: Icon(
+                                            Icons.local_grocery_store_outlined,
+                                            color: Colors.white,
+                                            size: 30,
+                                          ),
+
+                                          // Image.asset(
+                                          //   "assets/icons/home.png",
+                                          //   width: 10,
+                                          //   height: 10,
+                                          // ), // no matter how big it is, it won't overflow
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                        const EdgeInsets.only(left: 14),
+                                        child: Text('ORDER',
+                                            // style: widget.ischamberListSelected
+                                            //     ? Style
+                                            //     .drawer_button_selected_style
+                                            //     : Style.drawer_button_style
+                                        ),
+                                      )
+                                    ],
+                                  )),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBranch()));
+                              },
+                              child: Container(
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(100),
+                                        bottomLeft: Radius.circular(100)),
+                                    // color: widget.ischamberListSelected
+                                    //     ? Color(0xffffffff)
+                                    //     : Color(0xff464645),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 40,
+                                        width: 40,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                          BorderRadius.circular(100),
+                                          // color: widget.ischamberListSelected
+                                          //     ? Colors.green
+                                          //     : Color(0xff464645),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                          BorderRadius.circular(10),
+                                          child: Icon(
+                                            Icons.add_box_sharp,
+                                            color: Colors.white,
+                                            size: 30,
+                                          ),
+
+                                          // Image.asset(
+                                          //   "assets/icons/home.png",
+                                          //   width: 10,
+                                          //   height: 10,
+                                          // ), // no matter how big it is, it won't overflow
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                        const EdgeInsets.only(left: 14),
+                                        child: Text('MEDICINE SETUP',
+                                            // style: widget.ischamberListSelected
+                                            //     ? Style
+                                            //     .drawer_button_selected_style
+                                            //     : Style.drawer_button_style
+                                        ),
+                                      )
+                                    ],
+                                  )),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBranch()));
+                              },
+                              child: Container(
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(100),
+                                        bottomLeft: Radius.circular(100)),
+                                    // color: widget.ischamberListSelected
+                                    //     ? Color(0xffffffff)
+                                    //     : Color(0xff464645),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 40,
+                                        width: 40,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                          BorderRadius.circular(100),
+                                          // color: widget.ischamberListSelected
+                                          //     ? Colors.green
+                                          //     : Color(0xff464645),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                          BorderRadius.circular(10),
+                                          child: Icon(
+                                            Icons.list_outlined,
+                                            color: Colors.white,
+                                            size: 30,
+                                          ),
+
+                                          // Image.asset(
+                                          //   "assets/icons/home.png",
+                                          //   width: 10,
+                                          //   height: 10,
+                                          // ), // no matter how big it is, it won't overflow
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding:
+                                        const EdgeInsets.only(left: 14),
+                                        child: Text('MEDICINE LIST',
+                                            // style: widget.ischamberListSelected
+                                            //     ? Style
+                                            //     .drawer_button_selected_style
+                                            //     : Style.drawer_button_style
+                                        ),
+                                      )
+                                    ],
+                                  )),
+                            ),
+                            GestureDetector(
+                              onTap: () {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffPage()));
                               },
                               child: Container(
@@ -306,7 +591,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                           borderRadius:
                                           BorderRadius.circular(10),
                                           child: Icon(
-                                            Icons.schedule,
+                                            Icons.add_box_sharp,
                                             color: Colors.white,
                                             size: 30,
                                           ),
@@ -321,7 +606,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                       Padding(
                                         padding:
                                         const EdgeInsets.only(left: 14),
-                                        child: Text('STAFF SETUP',
+                                        child: Text('ADD STUFF',
                                             // style: widget.isScheduleSelected
                                             //     ? Style
                                             //     .drawer_button_selected_style
@@ -362,7 +647,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                           borderRadius:
                                           BorderRadius.circular(10),
                                           child: Icon(
-                                            Icons.money,
+                                            Icons.list_outlined,
                                             color: Colors.white,
                                             size: 30,
                                           ),
@@ -377,7 +662,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                       Padding(
                                         padding:
                                         const EdgeInsets.only(left: 14),
-                                        child: Text('STAFF LIST',
+                                        child: Text('STUFF LIST',
                                             // style: widget.isFeeSetupSelected
                                             //     ? Style
                                             //     .drawer_button_selected_style
@@ -389,6 +674,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffList()));
                               },
                               child: Container(
                                   height: 40,
@@ -396,7 +682,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
                                         bottomLeft: Radius.circular(100)),
-                                    // color: widget.isAppointmentSelected
+                                    // color: widget.isFeeSetupSelected
                                     //     ? Color(0xffffffff)
                                     //     : Color(0xff464645),
                                   ),
@@ -409,7 +695,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
-                                          // color: widget.isAppointmentSelected
+                                          // color: widget.isFeeSetupSelected
                                           //     ? Colors.green
                                           //     : Color(0xff464645),
                                         ),
@@ -417,7 +703,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                           borderRadius:
                                           BorderRadius.circular(10),
                                           child: Icon(
-                                            Icons.touch_app_outlined,
+                                            Icons.list_outlined,
                                             color: Colors.white,
                                             size: 30,
                                           ),
@@ -432,340 +718,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                       Padding(
                                         padding:
                                         const EdgeInsets.only(left: 14),
-                                        child: Text('APPOINTMENT',
-                                            // style: widget.isAppointmentSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
-                                        ),
-                                      )
-                                    ],
-                                  )),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                              },
-                              child: Container(
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(100),
-                                        bottomLeft: Radius.circular(100)),
-                                    // color: widget.isRefferPatientSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        height: 40,
-                                        width: 40,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(100),
-                                          // color: widget.isRefferPatientSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
-                                        ),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                          BorderRadius.circular(10),
-                                          child: Icon(
-                                            Icons.group,
-                                            color: Colors.white,
-                                            size: 30,
-                                          ),
-
-                                          // Image.asset(
-                                          //   "assets/icons/home.png",
-                                          //   width: 10,
-                                          //   height: 10,
-                                          // ), // no matter how big it is, it won't overflow
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(left: 14),
-                                        child: Text('COMPLETE APPOINTMENT',
-                                            // style: widget
-                                            //     .isRefferPatientSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
-                                        ),
-                                      )
-                                    ],
-                                  )),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                              },
-                              child: Container(
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(100),
-                                        bottomLeft: Radius.circular(100)),
-                                    // color: widget.isRefferPatientSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        height: 40,
-                                        width: 40,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(100),
-                                          // color: widget.isRefferPatientSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
-                                        ),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                          BorderRadius.circular(10),
-                                          child: Icon(
-                                            Icons.person_add,
-                                            color: Colors.white,
-                                            size: 30,
-                                          ),
-
-                                          // Image.asset(
-                                          //   "assets/icons/home.png",
-                                          //   width: 10,
-                                          //   height: 10,
-                                          // ), // no matter how big it is, it won't overflow
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(left: 14),
-                                        child: Text('REFER PATIENT',
-                                            // style: widget
-                                            //     .isRefferPatientSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
-                                        ),
-                                      )
-                                    ],
-                                  )),
-                            ),
-
-                            GestureDetector(
-                              onTap: () {
-                              },
-                              child: Container(
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(100),
-                                        bottomLeft: Radius.circular(100)),
-                                    // color: widget.isAssistantSetupSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        height: 40,
-                                        width: 40,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(100),
-                                          // color: widget.isAssistantSetupSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
-                                        ),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                          BorderRadius.circular(10),
-                                          child: Icon(
-                                            Icons.safety_divider,
-                                            color: Colors.white,
-                                            size: 30,
-                                          ),
-
-                                          // Image.asset(
-                                          //   "assets/icons/home.png",
-                                          //   width: 10,
-                                          //   height: 10,
-                                          // ), // no matter how big it is, it won't overflow
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(left: 14),
-                                        child: Text('ASSISTANT SETUP',
-                                            // style: widget
-                                            //     .isAssistantSetupSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
-                                        ),
-                                      )
-                                    ],
-                                  )),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                              },
-                              child: Container(
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(100),
-                                        bottomLeft: Radius.circular(100)),
-                                    // color: widget.isFamilySelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        height: 40,
-                                        width: 40,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(100),
-                                          // color: widget.isFamilySelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
-                                        ),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                          BorderRadius.circular(10),
-                                          child: Icon(
-                                            Icons.person_pin_circle_outlined,
-                                            color: Colors.white,
-                                            size: 30,
-                                          ),
-
-                                          // Image.asset(
-                                          //   "assets/icons/home.png",
-                                          //   width: 10,
-                                          //   height: 10,
-                                          // ), // no matter how big it is, it won't overflow
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(left: 14),
-                                        child: Text('FAMILY LIST',
-                                            // style: widget.isFamilySelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
-                                        ),
-                                      )
-                                    ],
-                                  )),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                              },
-                              child: Container(
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(100),
-                                        bottomLeft: Radius.circular(100)),
-                                    // color: widget.isWalletSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        height: 40,
-                                        width: 40,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(100),
-                                          // color: widget.isWalletSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
-                                        ),
-                                        child: ClipRRect(
-                                            borderRadius:
-                                            BorderRadius.circular(10),
-                                            child: Icon(
-                                                Icons.wallet_travel_outlined,
-                                                size: 30,
-                                                color: Colors.white)
-
-                                          // Image.asset(
-                                          //   "assets/icons/home.png",
-                                          //   width: 10,
-                                          //   height: 10,
-                                          // ), // no matter how big it is, it won't overflow
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(left: 14),
-                                        child: Text('WALLET',
-                                            // style: widget.isWalletSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
-                                        ),
-                                      )
-                                    ],
-                                  )),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                              },
-                              child: Container(
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(100),
-                                        bottomLeft: Radius.circular(100)),
-                                    // color: widget.isTransactionSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        height: 40,
-                                        width: 40,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                          BorderRadius.circular(100),
-                                          // color: widget.isTransactionSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
-                                        ),
-                                        child: ClipRRect(
-                                            borderRadius:
-                                            BorderRadius.circular(10),
-                                            child: Icon(
-                                                Icons.transform_outlined,
-                                                size: 30,
-                                                color: Colors.white)
-
-                                          // Image.asset(
-                                          //   "assets/icons/home.png",
-                                          //   width: 10,
-                                          //   height: 10,
-                                          // ), // no matter how big it is, it won't overflow
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(left: 14),
-                                        child: Text('TRANSACTION',
-                                            // style: widget.isTransactionSelected
+                                        child: Text('BRANCH LIST',
+                                            // style: widget.isFeeSetupSelected
                                             //     ? Style
                                             //     .drawer_button_selected_style
                                             //     : Style.drawer_button_style

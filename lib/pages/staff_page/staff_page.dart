@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../utils/colors_code.dart';
+import '../../utils/images.dart';
 import '../../utils/styles.dart';
 import '../drawer_page/drawer_page.dart';
 import '../widgets/drop_down_button.dart';
@@ -23,6 +24,11 @@ class StaffPage extends StatelessWidget {
         backgroundColor: ColorsCode.primary_color,
         bottomOpacity: 0.0,
         elevation: 0.0,
+        title: Image.asset(
+          Images.logo,
+          scale: 25,
+          color: Colors.white,
+        ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
         }, icon: Icon(Icons.menu, size: 25,)),

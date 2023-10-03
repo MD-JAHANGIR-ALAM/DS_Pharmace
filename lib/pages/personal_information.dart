@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/colors_code.dart';
+import '../utils/images.dart';
 import 'drawer_page/drawer_page.dart';
 
 
@@ -27,6 +28,11 @@ class _Profile_InfoState extends State<Profile_Info> {
         backgroundColor: ColorsCode.primary_color,
         bottomOpacity: 0.0,
         elevation: 0.0,
+        title: Image.asset(
+          Images.logo,
+          scale: 25,
+          color: Colors.white,
+        ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
         }, icon: Icon(Icons.menu, size: 25,)),
@@ -61,6 +67,13 @@ class _Profile_InfoState extends State<Profile_Info> {
               width: double.infinity,
               decoration: const BoxDecoration(
                   color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+              ),
+              child: Center(
+                child: Icon(
+                  Icons.account_circle,
+                  size: 80,
+                  color: Colors.white,
+                ),
               ),
             ),
             const SizedBox(height: 15,),

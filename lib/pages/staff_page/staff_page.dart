@@ -60,112 +60,106 @@ class StaffPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Container(
-                    height: Get.height * .05,
-                    width: Get.width,
-                    decoration: const BoxDecoration(
-                        color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+              Container(
+                height: Get.height * .05,
+                width: Get.width,
+                decoration: const BoxDecoration(
+                    color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Staff Setup", style: Style.dashboardBlackText700,),
+                    Style.distan_size5,
+                    Divider(height: 3,),
+                    Style.distan_size5,
+                    Text("Staff Name", style: Style.dashboardBlackText400,),
+                    Style.distan_size5,
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Name',
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15, right: 15, top: 60),
-                    child: Positioned(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("Staff Setup", style: Style.dashboardBlackText700,),
-                            Divider(height: 3,),
-                            Style.distan_size5,
-                            Text("Staff Name", style: Style.dashboardBlackText400,),
-                            Style.distan_size5,
-                            TextField(
-                              decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Name',
-                              ),
-                            ),
-                            Style.distan_size5,
-                            Text("Designation", style: Style.dashboardBlackText400,),
-                            Style.distan_size5,
-                            TextField(
-                              decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Designation',
-                              ),
-                            ),
-                            Style.distan_size5,
-                            Custom_DDButton(),
-                            Style.distan_size5,
-                            Text("Surename", style: Style.dashboardBlackText400,),
-                            Style.distan_size5,
-                            TextField(
-                              decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Surename',
-                              ),
-                            ),
-                            Style.distan_size5,
-                            Text("Contact number", style: Style.dashboardBlackText400,),
-                            Style.distan_size5,
-                            TextField(
-                              decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Number',
-                              ),
-                            ),
-                            Style.distan_size5,
-                            GestureDetector(
-                              onTap: (){},
-                              child: Container(
-                                height: Get.height * .05,
-                                width: Get.width,
-                                decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
-                                    borderRadius: BorderRadius.all(Radius.circular(12))),
-                                child: Center(
-                                  child: Text("Upload Staff image", style: TextStyle(color: Colors.white),),
-                                ),
-                              ),
-                            ),
-                            Style.distan_size5,
-                            Text("Password", style: Style.dashboardBlackText400,),
-                            Style.distan_size5,
-                            TextField(
-                              decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Password',
-                              ),
-                            ),
-                            Style.distan_size5,
-                            Text("Confirm password", style: Style.dashboardBlackText400,),
-                            Style.distan_size5,
-                            TextField(
-                              decoration: InputDecoration(
-                                border: OutlineInputBorder(),
-                                labelText: 'Confirm password',
-                              ),
-                            ),
-                            Style.distan_size5,
-                            GestureDetector(
-                              onTap: (){},
-                              child: Container(
-                                height: Get.height * .05,
-                                width: Get.width,
-                                decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
-                                    borderRadius: BorderRadius.all(Radius.circular(12))),
-                                child: Center(
-                                  child: Text("Submit", style: TextStyle(color: Colors.white),),
-                                ),
-                              ),
-                            ),
-                            Style.distan_size10,
-                          ],
-                        )
+                    Style.distan_size5,
+                    Text("Designation", style: Style.dashboardBlackText400,),
+                    Style.distan_size5,
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Designation',
+                      ),
                     ),
-                  )
-                ],
+                    Style.distan_size5,
+                    Custom_DDButton(),
+                    Style.distan_size5,
+                    Text("Surename", style: Style.dashboardBlackText400,),
+                    Style.distan_size5,
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Surename',
+                      ),
+                    ),
+                    Style.distan_size5,
+                    Text("Contact number", style: Style.dashboardBlackText400,),
+                    Style.distan_size5,
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Number',
+                      ),
+                    ),
+                    Style.distan_size5,
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        height: Get.height * .05,
+                        width: Get.width,
+                        decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        child: Center(
+                          child: Text("Upload Staff image", style: TextStyle(color: Colors.white),),
+                        ),
+                      ),
+                    ),
+                    Style.distan_size5,
+                    Text("Password", style: Style.dashboardBlackText400,),
+                    Style.distan_size5,
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Password',
+                      ),
+                    ),
+                    Style.distan_size5,
+                    Text("Confirm password", style: Style.dashboardBlackText400,),
+                    Style.distan_size5,
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Confirm password',
+                      ),
+                    ),
+                    Style.distan_size5,
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        height: Get.height * .05,
+                        width: Get.width,
+                        decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        child: Center(
+                          child: Text("Submit", style: TextStyle(color: Colors.white),),
+                        ),
+                      ),
+                    ),
+                    Style.distan_size10,
+                  ],
+                ),
               )
             ],
           ),

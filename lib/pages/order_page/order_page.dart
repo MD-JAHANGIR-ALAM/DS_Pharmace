@@ -79,7 +79,7 @@ class _OrderPageState extends State<OrderPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 15),
+                padding: const EdgeInsets.only(left: 15, top: 10),
                 child: Text("Order", style: Style.dashboardBlackText700,),
               ),
               Style.distan_size5,

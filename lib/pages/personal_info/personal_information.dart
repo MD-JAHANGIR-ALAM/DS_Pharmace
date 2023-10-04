@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../utils/colors_code.dart';
-import '../utils/images.dart';
-import '../utils/styles.dart';
-import 'drawer_page/drawer_page.dart';
+import '../../utils/colors_code.dart';
+import '../../utils/images.dart';
+import '../../utils/styles.dart';
+import '../drawer_page/drawer_page.dart';
 
 
 class Profile_Info extends StatefulWidget {

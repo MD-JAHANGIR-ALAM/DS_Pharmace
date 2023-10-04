@@ -26,7 +26,7 @@ class SubPage201 extends StatelessWidget {
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderDetails()));
                       },
                       child: Container(
-                        height: Get.height * .80,
+                        height: Get.height * .04,
                         width: Get.width * .250,
                         color: ColorsCode.primary_color,
                         child: Center(child: Text("View Details", style: TextStyle(color: Colors.white),)),

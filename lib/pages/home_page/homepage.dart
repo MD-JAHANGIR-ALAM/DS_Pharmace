@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
-import '../utils/colors_code.dart';
-import '../utils/images.dart';
-import '../utils/styles.dart';
-import 'drawer_page/drawer_page.dart';
+import '../../utils/colors_code.dart';
+import '../../utils/images.dart';
+import '../../utils/styles.dart';
+import '../drawer_page/drawer_page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Style.distan_size10,
+              Style.widthdistan_size10,
               SizedBox(
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.16,
@@ -221,7 +221,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Style.distan_size10,
+              Style.widthdistan_size10,
               SizedBox(
                 // ignore: unrelated_type_equality_checks
                 child: Container(
@@ -316,7 +316,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 )),
-                Style.distan_size10,
+                Style.widthdistan_size10,
                 SizedBox(
                     // ignore: unrelated_type_equality_checks
                     child: GestureDetector(

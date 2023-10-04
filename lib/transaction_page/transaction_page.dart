@@ -1,5 +1,6 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../pages/drawer_page/drawer_page.dart';
 import '../utils/colors_code.dart';
@@ -62,8 +63,8 @@ class TransactionPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                height: 50,
-                width: double.infinity,
+                height: Get.height * .05,
+                width: Get.width,
                 decoration: BoxDecoration(
                     color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                 ),
@@ -72,11 +73,11 @@ class TransactionPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 15, top: 10),
                 child: Text("Transaction", style: Style.dashboardBlackText700,),
               ),
-              SizedBox(height: 5,),
+              Style.distan_size5,
               Divider(
                 height: 3,
               ),
-              SizedBox(height: 5,),
+              Style.distan_size5,
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
                 child: ButtonsTabBar(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../utils/colors_code.dart';
 import '../utils/styles.dart';
 import 'widgets/drop_down_button.dart';
@@ -17,9 +18,9 @@ class CreateBranch extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Center(child: Text("Branch Create", style: Style.robotoHeader20primaryColor,)),
-                SizedBox(height: 20,),
+                Style.distan_size20,
                 Text("Branch Name", style: Style.dashboardBlackText400,),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 TextFormField(
                   textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(
@@ -33,13 +34,13 @@ class CreateBranch extends StatelessWidget {
                     hintStyle: Style.text_hind_style,
                   ),
                 ),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 Text("Branch Location", style: Style.dashboardBlackText400,),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 DDButton(),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 Text("Trade license number", style: Style.dashboardBlackText400,),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 TextFormField(
                   textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(
@@ -53,12 +54,12 @@ class CreateBranch extends StatelessWidget {
                     hintStyle: Style.text_hind_style,
                   ),
                 ),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 GestureDetector(
                   onTap: (){},
                   child: Container(
-                    height: 50,
-                    width: double.infinity,
+                    height: Get.height * .06,
+                    width: Get.width,
                     decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                         borderRadius: BorderRadius.all(Radius.circular(12))),
                     child: Center(
@@ -66,9 +67,9 @@ class CreateBranch extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 Text("Phone number", style: Style.dashboardBlackText400,),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 TextFormField(
                   textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(
@@ -82,12 +83,12 @@ class CreateBranch extends StatelessWidget {
                     hintStyle: Style.text_hind_style,
                   ),
                 ),
-                SizedBox(height: 5,),
+                Style.distan_size5,
                 GestureDetector(
                   onTap: (){},
                   child: Container(
-                    height: 50,
-                    width: double.infinity,
+                    height: Get.height * .06,
+                    width: Get.width,
                     decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                         borderRadius: BorderRadius.all(Radius.circular(12))),
                     child: Center(
@@ -95,15 +96,15 @@ class CreateBranch extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                Style.distan_size20,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
                       onTap: (){},
                       child: Container(
-                        height: 45,
-                        width: 170,
+                        height: Get.height * .06,
+                        width: Get.width * .440,
                         decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                             borderRadius: BorderRadius.all(Radius.circular(12))),
                         child: Center(
@@ -114,8 +115,8 @@ class CreateBranch extends StatelessWidget {
                     GestureDetector(
                       onTap: (){},
                       child: Container(
-                        height: 45,
-                        width: 170,
+                        height: Get.height * .06,
+                        width: Get.width * .440,
                         decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                             borderRadius: BorderRadius.all(Radius.circular(12))),
                         child: Center(

@@ -3,6 +3,7 @@ import 'package:ds_pharmace/pages/order_page/sub_page_1.dart';
 import 'package:ds_pharmace/pages/order_page/sub_page_2.dart';
 import 'package:flutter/material.dart';
 import 'package:buttons_tabbar/buttons_tabbar.dart';
+import 'package:get/get.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/images.dart';
 import '../../utils/styles.dart';
@@ -71,8 +72,8 @@ class _OrderPageState extends State<OrderPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Container(
-                height: 50,
-                width: double.infinity,
+                height: Get.height * .05,
+                width: Get.width,
                 decoration: BoxDecoration(
                     color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                 ),
@@ -81,9 +82,11 @@ class _OrderPageState extends State<OrderPage> {
                 padding: const EdgeInsets.only(left: 15),
                 child: Text("Order", style: Style.dashboardBlackText700,),
               ),
+              Style.distan_size5,
               Divider(
                 height: 3,
               ),
+              Style.distan_size5,
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
                 child: ButtonsTabBar(

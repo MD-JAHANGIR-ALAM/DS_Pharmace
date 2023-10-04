@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:get/get.dart';
 import '../utils/colors_code.dart';
 import '../utils/images.dart';
 import '../utils/styles.dart';
@@ -64,8 +65,8 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Container(
-            height: 150,
-            width: double.infinity,
+            height: Get.height * .150,
+            width: Get.width,
             decoration: BoxDecoration(
               color: ColorsCode.primary_color,
               borderRadius: BorderRadius.only(
@@ -88,15 +89,13 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          SizedBox(
-            height: 15,
-          ),
+          Style.distan_size15,
           CarouselSlider.builder(
               itemCount: 5,
               itemBuilder: (context, index, realIndex) {
                 return Container(
-                  height: 200,
-                  width: 300,
+                  height: Get.height * .200,
+                  width: Get.width * .750,
                   color: ColorsCode.primary_color,
                 );
               },
@@ -105,9 +104,7 @@ class _HomePageState extends State<HomePage> {
                 autoPlay: true,
                 aspectRatio: 1 / 2,
               )),
-          SizedBox(
-            height: 10,
-          ),
+          Style.distan_size10,
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -145,9 +142,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              SizedBox(
-                width: 10,
-              ),
+              Style.distan_size10,
               SizedBox(
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.16,
@@ -226,9 +221,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 10,
-              ),
+              Style.distan_size10,
               SizedBox(
                 // ignore: unrelated_type_equality_checks
                 child: Container(
@@ -323,9 +316,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 )),
-                const SizedBox(
-                  width: 10,
-                ),
+                Style.distan_size10,
                 SizedBox(
                     // ignore: unrelated_type_equality_checks
                     child: GestureDetector(

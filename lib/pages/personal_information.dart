@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import '../utils/colors_code.dart';
 import '../utils/images.dart';
+import '../utils/styles.dart';
 import 'drawer_page/drawer_page.dart';
 
 
@@ -63,8 +64,8 @@ class _Profile_InfoState extends State<Profile_Info> {
         child: Column(
           children: [
             Container(
-              height: 150,
-              width: double.infinity,
+              height: Get.height * .150,
+              width: Get.width,
               decoration: const BoxDecoration(
                   color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
               ),
@@ -76,14 +77,14 @@ class _Profile_InfoState extends State<Profile_Info> {
                 ),
               ),
             ),
-            const SizedBox(height: 15,),
+            Style.distan_size15,
             Stack(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
-                    height: 40,
-                    width: double.infinity,
+                    height: Get.height * .05,
+                    width: Get.width,
                     decoration: BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                 ),
@@ -107,9 +108,7 @@ class _Profile_InfoState extends State<Profile_Info> {
                                   height: 3,
                                 ),
                                 Text("Email : jahangirad14@gmail.com"),
-                                SizedBox(
-                                  height: 10,
-                                ),
+                                Style.distan_size10,
                               ],
                             ),
                           ),
@@ -119,14 +118,14 @@ class _Profile_InfoState extends State<Profile_Info> {
                 )
               ],
             ),
-            const SizedBox(height: 15,),
+            Style.distan_size15,
             Stack(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
-                    height: 40,
-                    width: double.infinity,
+                    height: Get.height * .05,
+                    width: Get.width,
                     decoration: BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                 ),
@@ -150,9 +149,7 @@ class _Profile_InfoState extends State<Profile_Info> {
                                   height: 3,
                                 ),
                                 Text("Address : Sundarganj, Gaibandha"),
-                                SizedBox(
-                                  height: 10,
-                                ),
+                                Style.distan_size10,
                               ],
                             ),
                           ),
@@ -173,9 +170,7 @@ class _Profile_InfoState extends State<Profile_Info> {
                                   height: 3,
                                 ),
                                 Text("Address : Sundarganj, Gaibandha"),
-                                SizedBox(
-                                  height: 10,
-                                ),
+                                Style.distan_size10,
                               ],
                             ),
                           ),
@@ -196,9 +191,7 @@ class _Profile_InfoState extends State<Profile_Info> {
                                   height: 3,
                                 ),
                                 Text("Address : Sundarganj, Gaibandha"),
-                                SizedBox(
-                                  height: 10,
-                                ),
+                                Style.distan_size10,
                               ],
                             ),
                           ),
@@ -219,9 +212,7 @@ class _Profile_InfoState extends State<Profile_Info> {
                                   height: 3,
                                 ),
                                 Text("Address : Sundarganj, Gaibandha"),
-                                SizedBox(
-                                  height: 10,
-                                ),
+                                Style.distan_size10,
                               ],
                             ),
                           ),
@@ -242,9 +233,7 @@ class _Profile_InfoState extends State<Profile_Info> {
                                   height: 3,
                                 ),
                                 Text("Address : Sundarganj, Gaibandha"),
-                                SizedBox(
-                                  height: 10,
-                                ),
+                                Style.distan_size10,
                               ],
                             ),
                           ),

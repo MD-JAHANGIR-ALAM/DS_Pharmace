@@ -1,15 +1,15 @@
 // ignore_for_file: library_private_types_in_public_api, prefer_const_constructors, deprecated_member_use
 
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../transaction_page/transaction_page.dart';
 import '../../utils/colors_code.dart';
+import '../../utils/images.dart';
 import '../../utils/styles.dart';
 import '../create_branch.dart';
 import '../homepage.dart';
+import '../medicine_setup/medicine_setup.dart';
 import '../order_page/order_page.dart';
 import '../personal_information.dart';
 import '../staff_page/staff_list.dart';
@@ -70,41 +70,15 @@ class _MainDrawerState extends State<MainDrawer> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        height: 150,
-                        width: double.infinity,//Get.width*.3,
+                        height: Get.height * .150,
+                        width: Get.width,
                         padding: const EdgeInsets.all(20),
                         color: const Color(0xff464645),
                         child: Center(
                           child: Padding(
                             padding: const EdgeInsets.only(
                                 left: 0, top: 6, right: 0, bottom: 6),
-                            child: Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "assets/images/logo_icon.png",
-                                  height: 100,
-                                  width: 50,
-                                ),
-                                Style.widthdistan_size2,
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
-                                    Text(
-                                      "Digital Shastho",
-                                      //style: Style.drawer_heading_style,
-                                    ),
-                                    Style.distan_size2,
-                                    Text(
-                                      "Made In Bangladesh",
-                                      //style: Style.alltext_white_text_style,
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
+                            child: Image.asset(Images.logo)
                           ),
                         ),
                       ),
@@ -123,7 +97,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -136,8 +110,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -176,7 +150,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile_Info()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * 0.05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -189,8 +163,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -229,7 +203,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBranch()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * 0.05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -242,8 +216,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -285,7 +259,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>WalletPage()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -298,8 +272,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -341,7 +315,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>TransactionPage()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -354,8 +328,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -397,7 +371,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -410,8 +384,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -450,10 +424,10 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBranch()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicineSetup()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -466,8 +440,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -509,7 +483,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 //Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBranch()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -522,8 +496,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -565,7 +539,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffPage()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -578,8 +552,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -618,10 +592,10 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffList()));
+                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffList()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -634,8 +608,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
@@ -674,10 +648,10 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffList()));
+                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffList()));
                               },
                               child: Container(
-                                  height: 40,
+                                  height: Get.height * .05,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
@@ -690,8 +664,8 @@ class _MainDrawerState extends State<MainDrawer> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: Get.height * 0.05,
+                                        width: Get.width * 0.1,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/images.dart';
 import '../../utils/styles.dart';
@@ -63,8 +64,8 @@ class StaffPage extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   Container(
-                    height: 50,
-                    width: double.infinity,
+                    height: Get.height * .05,
+                    width: Get.width,
                     decoration: const BoxDecoration(
                         color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                     ),
@@ -77,50 +78,50 @@ class StaffPage extends StatelessWidget {
                           children: [
                             Text("Staff Setup", style: Style.dashboardBlackText700,),
                             Divider(height: 3,),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             Text("Staff Name", style: Style.dashboardBlackText400,),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             TextField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Name',
                               ),
                             ),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             Text("Designation", style: Style.dashboardBlackText400,),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             TextField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Designation',
                               ),
                             ),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             Custom_DDButton(),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             Text("Surename", style: Style.dashboardBlackText400,),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             TextField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Surename',
                               ),
                             ),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             Text("Contact number", style: Style.dashboardBlackText400,),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             TextField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Number',
                               ),
                             ),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             GestureDetector(
                               onTap: (){},
                               child: Container(
-                                height: 50,
-                                width: double.infinity,
+                                height: Get.height * .05,
+                                width: Get.width,
                                 decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
                                     borderRadius: BorderRadius.all(Radius.circular(12))),
                                 child: Center(
@@ -128,30 +129,30 @@ class StaffPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             Text("Password", style: Style.dashboardBlackText400,),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             TextField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Password',
                               ),
                             ),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             Text("Confirm password", style: Style.dashboardBlackText400,),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             TextField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Confirm password',
                               ),
                             ),
-                            SizedBox(height: 5,),
+                            Style.distan_size5,
                             GestureDetector(
                               onTap: (){},
                               child: Container(
-                                height: 50,
-                                width: double.infinity,
+                                height: Get.height * .05,
+                                width: Get.width,
                                 decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
                                     borderRadius: BorderRadius.all(Radius.circular(12))),
                                 child: Center(
@@ -159,6 +160,7 @@ class StaffPage extends StatelessWidget {
                                 ),
                               ),
                             ),
+                            Style.distan_size10,
                           ],
                         )
                     ),

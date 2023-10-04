@@ -1,5 +1,6 @@
 import 'package:ds_pharmace/pages/order_page/order_details.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../utils/colors_code.dart';
 
@@ -25,8 +26,8 @@ class SubPage201 extends StatelessWidget {
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderDetails()));
                       },
                       child: Container(
-                        height: 80,
-                        width: 100,
+                        height: Get.height * .80,
+                        width: Get.width * .250,
                         color: ColorsCode.primary_color,
                         child: Center(child: Text("View Details", style: TextStyle(color: Colors.white),)),
                       ),

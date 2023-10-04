@@ -1,0 +1,141 @@
+import 'package:flutter/material.dart';
+import '../../utils/colors_code.dart';
+import '../../utils/images.dart';
+import '../../utils/styles.dart';
+import '../drawer_page/drawer_page.dart';
+
+class WalletPage extends StatelessWidget {
+  WalletPage({super.key});
+
+  final GlobalKey<ScaffoldState> _drawer = GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: _drawer,
+      drawer: const Drawer(
+        child: MainDrawer(),
+      ),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: ColorsCode.primary_color,
+        bottomOpacity: 0.0,
+        elevation: 0.0,
+        title: Image.asset(
+          Images.logo,
+          scale: 25,
+          color: Colors.white,
+        ),
+        leading: IconButton(onPressed: (){
+          _drawer.currentState!.openDrawer();
+        }, icon: Icon(Icons.menu, size: 25,)),
+        actions: <Widget>[
+          IconButton(
+            icon: const Stack(
+              children: [
+                Icon(
+                  Icons.notifications_none,
+                  color: Colors.white,
+                ),
+                Positioned(
+                  child: Icon(
+                    Icons.brightness_1,
+                    color: Colors.red,
+                    size: 9,
+                  ),
+                )
+              ],
+            ),
+            onPressed: () {
+            },
+          ),
+
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                        color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15, right: 15, top: 60),
+                    child: Positioned(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("My Wallet", style: Style.dashboardBlackText700,),
+                            Divider(height: 3,),
+                            SizedBox(height: 5,),
+                            Container(
+                              height: MediaQuery.of(context).size.height / 4.5,
+                              width: double.infinity,
+                             decoration: BoxDecoration( color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(15))),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(Images.taka, scale: 15, color: Colors.white,),
+                                      SizedBox(width: 2,),
+                                      Text("0.0", style: TextStyle(color: Colors.white, fontSize: 30),)
+                                    ],
+                                  ),
+                                  Text("Total Blance", style: TextStyle(color: Colors.white, fontSize: 15))
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 20,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                GestureDetector(
+                                  onTap: (){},
+                                  child: Container(
+                                    height: 50,
+                                    width: MediaQuery.of(context).size.width / 2.3,
+                                    decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
+                                        borderRadius: BorderRadius.all(Radius.circular(12))),
+                                    child: Center(
+                                      child: Text("+ Add Wallet", style: TextStyle(color: Colors.white),),
+                                    ),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: (){},
+                                  child: Container(
+                                    height: 50,
+                                    width: MediaQuery.of(context).size.width / 2.3,
+                                    decoration: BoxDecoration(color: ColorsCode.snackbar_error_color, border: Border.all(color: ColorsCode.snackbar_error_color),
+                                        borderRadius: BorderRadius.all(Radius.circular(12))),
+                                    child: Center(
+                                      child: Text("Withdraw Wallet", style: TextStyle(color: Colors.white),),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        )
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

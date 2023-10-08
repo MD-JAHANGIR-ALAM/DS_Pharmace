@@ -7,7 +7,7 @@ import '../../utils/styles.dart';
 import '../drawer_page/drawer_page.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawer,
-      drawer: Drawer(
+      drawer: const Drawer(
         child: MainDrawer(),
       ),
       appBar: AppBar(
@@ -37,14 +37,14 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               _drawer.currentState!.openDrawer();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.menu,
               size: 25,
             )),
         actions: <Widget>[
           IconButton(
-            icon: Stack(
-              children: const [
+            icon: const Stack(
+              children: [
                 Icon(
                   Icons.notifications_none,
                   color: Colors.white,
@@ -67,13 +67,13 @@ class _HomePageState extends State<HomePage> {
           Container(
             height: Get.height * .150,
             width: Get.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: ColorsCode.primary_color,
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10)),
             ),
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                 child: Center(
                   child: InkWell(
                     onTap: () {},
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                       ]),
                   child: InkWell(
                     onTap: () {},
-                    child: Center(
+                    child: const Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -168,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                             "123",
                             style: Style.dashboardBlackText700,
                           ),
-                          const Text(
+                          Text(
                             'Patient in queue',
                             style: Style.dashboardBlackText400,
                           ),
@@ -202,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                       ]),
                   child: InkWell(
                     onTap: () {},
-                    child: Center(
+                    child: const Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -211,7 +211,7 @@ class _HomePageState extends State<HomePage> {
                             "123",
                             style: Style.dashboardBlackText700,
                           ),
-                          const Text(
+                          Text(
                             'Emergency patient',
                             style: Style.dashboardBlackText400,
                           ),
@@ -239,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                       ]),
                   child: InkWell(
                     onTap: () {},
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -247,7 +247,7 @@ class _HomePageState extends State<HomePage> {
                           "123",
                           style: Style.dashboardBlackText700,
                         ),
-                        const Text(
+                        Text(
                           'Total appointment',
                           style: Style.dashboardBlackText400,
                         ),
@@ -259,8 +259,8 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           Style.distan_size10,
-          Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16),
+          const Padding(
+            padding: EdgeInsets.only(left: 16, right: 16),
             child: Row(
               children: [
                 SizedBox(
@@ -269,7 +269,7 @@ class _HomePageState extends State<HomePage> {
                   'Be a Donor',
                   style: Style.dashboardBlackText400,
                 )),
-                const Spacer(),
+                Spacer(),
                 SizedBox(
                     // ignore: unrelated_type_equality_checks
                     child: Text(

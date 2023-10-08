@@ -30,7 +30,7 @@ class MedicineSetup extends StatelessWidget {
         ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
-        }, icon: Icon(Icons.menu, size: 25,)),
+        }, icon: const Icon(Icons.menu, size: 25,)),
         actions: <Widget>[
           IconButton(
             icon: const Stack(
@@ -61,7 +61,7 @@ class MedicineSetup extends StatelessWidget {
               Container(
                 height: Get.height * .05,
                 width: Get.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                 ),
               ),
@@ -93,16 +93,16 @@ class MedicineSetup extends StatelessWidget {
                                 children: [
                                   ListTile(
                                     title: Text("Napa${index}"),
-                                    subtitle: Text("Order on #25648895235"),
+                                    subtitle: const Text("Order on #25648895235"),
                                     trailing: GestureDetector(
                                       child: Container(
                                         height: Get.height * .05,
                                         width: Get.width * .250,
                                         color: ColorsCode.primary_color,
-                                        child: Center(child: Text("Add to card", style: TextStyle(color: Colors.white),)),
+                                        child: const Center(child: Text("Add to card", style: TextStyle(color: Colors.white),)),
                                       ),
                                     ),
-                                    leading: CircleAvatar(
+                                    leading: const CircleAvatar(
                                       radius: 30,
                                     ),
                                   )

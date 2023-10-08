@@ -9,7 +9,7 @@ class SubPage201 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: double.infinity,
       width: double.infinity,
       child: ListView.builder(
@@ -19,8 +19,8 @@ class SubPage201 extends StatelessWidget {
               child: Column(
                 children: [
                   ListTile(
-                    title: Text("Medicine"),
-                    subtitle: Text("Order on #25648895235"),
+                    title: const Text("Medicine"),
+                    subtitle: const Text("Order on #25648895235"),
                     trailing: GestureDetector(
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderDetails()));
@@ -29,7 +29,7 @@ class SubPage201 extends StatelessWidget {
                         height: Get.height * .04,
                         width: Get.width * .250,
                         color: ColorsCode.primary_color,
-                        child: Center(child: Text("View Details", style: TextStyle(color: Colors.white),)),
+                        child: const Center(child: Text("View Details", style: TextStyle(color: Colors.white),)),
                       ),
                     ),
                   )

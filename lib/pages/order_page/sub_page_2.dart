@@ -20,21 +20,21 @@ class SubPage_2 extends StatelessWidget {
               ButtonsTabBar(
                 backgroundColor: ColorsCode.primary_color,
                 labelStyle:
-                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                 tabs: [
                   Tab(
-                    child: Container(
+                    child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,
-                        child: Center(child: Text("By Seller", style: TextStyle(color: Colors.black),))),
+                        child: const Center(child: Text("By Seller", style: TextStyle(color: Colors.black),))),
                   ),
                   Tab(
-                    child: Container(
+                    child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,
-                        child: Center(child: Text("By Heroboy", style: TextStyle(color: Colors.black)))),
+                        child: const Center(child: Text("By Heroboy", style: TextStyle(color: Colors.black)))),
                   ),
                 ],
               ),
-              Expanded(
+              const Expanded(
                 child: TabBarView(
                   children: <Widget>[
                     SubPage201(),

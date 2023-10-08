@@ -32,7 +32,7 @@ class StaffPage extends StatelessWidget {
         ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
-        }, icon: Icon(Icons.menu, size: 25,)),
+        }, icon: const Icon(Icons.menu, size: 25,)),
         actions: <Widget>[
           IconButton(
             icon: const Stack(
@@ -72,42 +72,42 @@ class StaffPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Staff Setup", style: Style.dashboardBlackText700,),
+                    const Text("Staff Setup", style: Style.dashboardBlackText700,),
                     Style.distan_size5,
-                    Divider(height: 3,),
+                    const Divider(height: 3,),
                     Style.distan_size5,
-                    Text("Staff Name", style: Style.dashboardBlackText400,),
+                    const Text("Staff Name", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    TextField(
+                    const TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Name',
                       ),
                     ),
                     Style.distan_size5,
-                    Text("Designation", style: Style.dashboardBlackText400,),
+                    const Text("Designation", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    TextField(
+                    const TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Designation',
                       ),
                     ),
                     Style.distan_size5,
-                    Custom_DDButton(),
+                    const Custom_DDButton(),
                     Style.distan_size5,
-                    Text("Surename", style: Style.dashboardBlackText400,),
+                    const Text("Surename", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    TextField(
+                    const TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Surename',
                       ),
                     ),
                     Style.distan_size5,
-                    Text("Contact number", style: Style.dashboardBlackText400,),
+                    const Text("Contact number", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    TextField(
+                    const TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Number',
@@ -121,24 +121,24 @@ class StaffPage extends StatelessWidget {
                         width: Get.width,
                         decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
                             borderRadius: BorderRadius.all(Radius.circular(12))),
-                        child: Center(
+                        child: const Center(
                           child: Text("Upload Staff image", style: TextStyle(color: Colors.white),),
                         ),
                       ),
                     ),
                     Style.distan_size5,
-                    Text("Password", style: Style.dashboardBlackText400,),
+                    const Text("Password", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    TextField(
+                    const TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Password',
                       ),
                     ),
                     Style.distan_size5,
-                    Text("Confirm password", style: Style.dashboardBlackText400,),
+                    const Text("Confirm password", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    TextField(
+                    const TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Confirm password',
@@ -151,8 +151,8 @@ class StaffPage extends StatelessWidget {
                         height: Get.height * .05,
                         width: Get.width,
                         decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        child: Center(
+                            borderRadius: const BorderRadius.all(Radius.circular(12))),
+                        child: const Center(
                           child: Text("Submit", style: TextStyle(color: Colors.white),),
                         ),
                       ),

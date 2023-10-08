@@ -31,7 +31,7 @@ class TransactionPage extends StatelessWidget {
         ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
-        }, icon: Icon(Icons.menu, size: 25,)),
+        }, icon: const Icon(Icons.menu, size: 25,)),
         actions: <Widget>[
           IconButton(
             icon: const Stack(
@@ -65,16 +65,16 @@ class TransactionPage extends StatelessWidget {
               Container(
                 height: Get.height * .05,
                 width: Get.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 10),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 10),
                 child: Text("Transaction", style: Style.dashboardBlackText700,),
               ),
               Style.distan_size5,
-              Divider(
+              const Divider(
                 height: 3,
               ),
               Style.distan_size5,
@@ -83,18 +83,18 @@ class TransactionPage extends StatelessWidget {
                 child: ButtonsTabBar(
                   backgroundColor: ColorsCode.primary_color,
                   labelStyle:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   tabs: [
                     Tab(
-                      child: Container(
+                      child: SizedBox(
                           width: MediaQuery.of(context).size.width / 2.4,
-                          child: Center(child: Text("Complete", style: TextStyle(color: Colors.black),))
+                          child: const Center(child: Text("Complete", style: TextStyle(color: Colors.black),))
                       ),
                     ),
                     Tab(
-                      child: Container(
+                      child: SizedBox(
                           width: MediaQuery.of(context).size.width / 2.4,
-                          child: Center(child: Text("Panding", style: TextStyle(color: Colors.black)))),
+                          child: const Center(child: Text("Panding", style: TextStyle(color: Colors.black)))),
                     ),
                   ],
                 ),

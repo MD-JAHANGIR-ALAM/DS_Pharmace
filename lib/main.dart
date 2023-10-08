@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'pages/home_page/homepage.dart';
 
 void main() {
-  runApp(MyAPP());
+  runApp(const MyAPP());
 }
 
 class MyAPP extends StatelessWidget {
@@ -11,7 +11,7 @@ class MyAPP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return const GetMaterialApp(
       title: "DS Pharmacy",
       debugShowCheckedModeBanner: false,
       home: HomePage()

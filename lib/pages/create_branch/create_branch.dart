@@ -5,7 +5,7 @@ import '../../utils/styles.dart';
 import '../widgets/drop_down_button.dart';
 
 class CreateBranch extends StatelessWidget {
-  CreateBranch({super.key});
+  const CreateBranch({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,9 @@ class CreateBranch extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(child: Text("Branch Create", style: Style.robotoHeader20primaryColor,)),
+                const Center(child: Text("Branch Create", style: Style.robotoHeader20primaryColor,)),
                 Style.distan_size20,
-                Text("Branch Name", style: Style.dashboardBlackText400,),
+                const Text("Branch Name", style: Style.dashboardBlackText400,),
                 Style.distan_size5,
                 TextFormField(
                   textInputAction: TextInputAction.next,
@@ -35,11 +35,11 @@ class CreateBranch extends StatelessWidget {
                   ),
                 ),
                 Style.distan_size5,
-                Text("Branch Location", style: Style.dashboardBlackText400,),
+                const Text("Branch Location", style: Style.dashboardBlackText400,),
                 Style.distan_size5,
-                DDButton(),
+                const DDButton(),
                 Style.distan_size5,
-                Text("Trade license number", style: Style.dashboardBlackText400,),
+                const Text("Trade license number", style: Style.dashboardBlackText400,),
                 Style.distan_size5,
                 TextFormField(
                   textInputAction: TextInputAction.next,
@@ -61,14 +61,14 @@ class CreateBranch extends StatelessWidget {
                     height: Get.height * .06,
                     width: Get.width,
                     decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    child: Center(
+                        borderRadius: const BorderRadius.all(Radius.circular(12))),
+                    child: const Center(
                       child: Text("Upload trade license photo"),
                     ),
                   ),
                 ),
                 Style.distan_size5,
-                Text("Phone number", style: Style.dashboardBlackText400,),
+                const Text("Phone number", style: Style.dashboardBlackText400,),
                 Style.distan_size5,
                 TextFormField(
                   textInputAction: TextInputAction.next,
@@ -90,8 +90,8 @@ class CreateBranch extends StatelessWidget {
                     height: Get.height * .06,
                     width: Get.width,
                     decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    child: Center(
+                        borderRadius: const BorderRadius.all(Radius.circular(12))),
+                    child: const Center(
                       child: Text("Upload pharmacy image"),
                     ),
                   ),
@@ -106,8 +106,8 @@ class CreateBranch extends StatelessWidget {
                         height: Get.height * .06,
                         width: Get.width * .440,
                         decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        child: Center(
+                            borderRadius: const BorderRadius.all(Radius.circular(12))),
+                        child: const Center(
                           child: Text("BACK"),
                         ),
                       ),
@@ -118,8 +118,8 @@ class CreateBranch extends StatelessWidget {
                         height: Get.height * .06,
                         width: Get.width * .440,
                         decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        child: Center(
+                            borderRadius: const BorderRadius.all(Radius.circular(12))),
+                        child: const Center(
                           child: Text("CONFIRM"),
                         ),
                       ),

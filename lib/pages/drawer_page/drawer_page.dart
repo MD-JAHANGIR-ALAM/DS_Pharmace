@@ -12,7 +12,6 @@ import '../home_page/homepage.dart';
 import '../medicine_setup/medicine_setup.dart';
 import '../order_page/order_page.dart';
 import '../personal_info/personal_information.dart';
-import '../staff_page/staff_list.dart';
 import '../staff_page/staff_page.dart';
 import '../wallet_page/wallet_page.dart';
 
@@ -20,39 +19,36 @@ import '../wallet_page/wallet_page.dart';
 class MainDrawer extends StatefulWidget {
   const MainDrawer({
     Key? key,
-    // this.isHomeSelected = true,
-    // this.isProfileSelected = false,
-    // this.ischamberListSelected = false,
-    // this.isScheduleSelected = false,
-    // this.isFeeSetupSelected = false,
-    // this.isAppointmentSelected = false,
-    // this.isRefferPatientSelected = false,
-    // this.isAssistantSetupSelected = false,
-    // this.isFamilySelected = false,
-    // this.isWalletSelected = false,
-    // this.isTransactionSelected = false,
+     this.isHomeSelected = true,
+     this.isProfileSelected = false,
+     this.isCreateBranchSelected = false,
+     this.isWalletSelected = false,
+    this.isTransactionSelected = false,
+    this.isOrderSelected = false,
+    this.isMedicineSelected = false,
+    this.isMedicineListSelected = false,
+    this.isAddStuffSelected = false,
+    this.isStuffListSelected = false,
+    this.isBranchListSelected = false,
   }) : super(key: key);
 
-  // final bool isHomeSelected;
-  // final bool isProfileSelected;
-  // final bool ischamberListSelected;
-  // final bool isScheduleSelected;
-  // final bool isAppointmentSelected;
-  // final bool isWalletSelected;
-  // final bool isTransactionSelected;
-  // final bool isFeeSetupSelected;
-  // final bool isFamilySelected;
-  // final bool isRefferPatientSelected;
-  // final bool isAssistantSetupSelected;
+   final bool isHomeSelected;
+   final bool isProfileSelected;
+   final bool isCreateBranchSelected;
+  final bool isWalletSelected;
+  final bool isTransactionSelected;
+  final bool isOrderSelected;
+  final bool isMedicineSelected;
+  final bool isMedicineListSelected;
+  final bool isAddStuffSelected;
+  final bool isStuffListSelected;
+  final bool isBranchListSelected;
 
   @override
   _MainDrawerState createState() => _MainDrawerState();
 }
 
 class _MainDrawerState extends State<MainDrawer> {
-
-  bool home = true;
-
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -102,7 +98,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
                                         bottomLeft: Radius.circular(100)),
-                                    color: home == true
+                                    color: widget.isHomeSelected == true
                                         ? Color(0xffffffff)
                                         : Color(0xff464645),
                                   ),
@@ -115,7 +111,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
-                                          color: home == true
+                                          color: widget.isHomeSelected == true
                                               ? Colors.green
                                               : Color(0xff464645),
                                         ),
@@ -136,7 +132,7 @@ class _MainDrawerState extends State<MainDrawer> {
                                         padding:
                                         const EdgeInsets.only(left: 14),
                                         child: Text('HOME',
-                                            style: home == true
+                                            style: widget.isHomeSelected == true
                                                 ? Style
                                                 .drawer_button_selected_style
                                                 : Style.drawer_button_style
@@ -155,9 +151,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
                                         bottomLeft: Radius.circular(100)),
-                                    // color: widget.isProfileSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
+                                    color: widget.isProfileSelected
+                                        ? Color(0xffffffff)
+                                        : Color(0xff464645),
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -168,9 +164,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
-                                          // color: widget.isProfileSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
+                                          color: widget.isProfileSelected
+                                              ? Colors.green
+                                              : Color(0xff464645),
                                         ),
                                         child: ClipRRect(
                                             borderRadius:
@@ -189,10 +185,10 @@ class _MainDrawerState extends State<MainDrawer> {
                                         padding:
                                         const EdgeInsets.only(left: 14),
                                         child: Text('PROFILE',
-                                            // style: widget.isProfileSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
+                                            style: widget.isProfileSelected
+                                                ? Style
+                                                .drawer_button_selected_style
+                                                : Style.drawer_button_style
                                         ),
                                       )
                                     ],
@@ -208,9 +204,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
                                         bottomLeft: Radius.circular(100)),
-                                    // color: widget.ischamberListSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
+                                    color: widget.isCreateBranchSelected
+                                        ? Color(0xffffffff)
+                                        : Color(0xff464645),
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -221,9 +217,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
-                                          // color: widget.ischamberListSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
+                                          color: widget.isCreateBranchSelected
+                                              ? Colors.green
+                                              : Color(0xff464645),
                                         ),
                                         child: ClipRRect(
                                           borderRadius:
@@ -245,10 +241,10 @@ class _MainDrawerState extends State<MainDrawer> {
                                         padding:
                                         const EdgeInsets.only(left: 14),
                                         child: Text('CREATE BRANCH',
-                                            // style: widget.ischamberListSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
+                                            style: widget.isCreateBranchSelected
+                                                ? Style
+                                                .drawer_button_selected_style
+                                                : Style.drawer_button_style
                                         ),
                                       )
                                     ],
@@ -264,9 +260,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
                                         bottomLeft: Radius.circular(100)),
-                                    // color: widget.ischamberListSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
+                                    color: widget.isWalletSelected
+                                        ? Color(0xffffffff)
+                                        : Color(0xff464645),
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -277,9 +273,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
-                                          // color: widget.ischamberListSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
+                                          color: widget.isWalletSelected
+                                              ? Colors.green
+                                              : Color(0xff464645),
                                         ),
                                         child: ClipRRect(
                                           borderRadius:
@@ -301,10 +297,10 @@ class _MainDrawerState extends State<MainDrawer> {
                                         padding:
                                         const EdgeInsets.only(left: 14),
                                         child: Text('WALLET',
-                                            // style: widget.ischamberListSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
+                                            style: widget.isWalletSelected
+                                                ? Style
+                                                .drawer_button_selected_style
+                                                : Style.drawer_button_style
                                         ),
                                       )
                                     ],
@@ -320,9 +316,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
                                         bottomLeft: Radius.circular(100)),
-                                    // color: widget.ischamberListSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
+                                    color: widget.isTransactionSelected
+                                        ? Color(0xffffffff)
+                                        : Color(0xff464645),
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -333,9 +329,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
-                                          // color: widget.ischamberListSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
+                                          color: widget.isTransactionSelected
+                                              ? Colors.green
+                                              : Color(0xff464645),
                                         ),
                                         child: ClipRRect(
                                           borderRadius:
@@ -357,10 +353,10 @@ class _MainDrawerState extends State<MainDrawer> {
                                         padding:
                                         const EdgeInsets.only(left: 14),
                                         child: Text('TRANSACTION',
-                                            // style: widget.ischamberListSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
+                                            style: widget.isTransactionSelected
+                                                ? Style
+                                                .drawer_button_selected_style
+                                                : Style.drawer_button_style
                                         ),
                                       )
                                     ],
@@ -376,9 +372,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                     borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(100),
                                         bottomLeft: Radius.circular(100)),
-                                    // color: widget.ischamberListSelected
-                                    //     ? Color(0xffffffff)
-                                    //     : Color(0xff464645),
+                                    color: widget.isOrderSelected
+                                        ? Color(0xffffffff)
+                                        : Color(0xff464645),
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -389,9 +385,9 @@ class _MainDrawerState extends State<MainDrawer> {
                                         decoration: BoxDecoration(
                                           borderRadius:
                                           BorderRadius.circular(100),
-                                          // color: widget.ischamberListSelected
-                                          //     ? Colors.green
-                                          //     : Color(0xff464645),
+                                          color: widget.isOrderSelected
+                                              ? Colors.green
+                                              : Color(0xff464645),
                                         ),
                                         child: ClipRRect(
                                           borderRadius:
@@ -413,10 +409,10 @@ class _MainDrawerState extends State<MainDrawer> {
                                         padding:
                                         const EdgeInsets.only(left: 14),
                                         child: Text('ORDER',
-                                            // style: widget.ischamberListSelected
-                                            //     ? Style
-                                            //     .drawer_button_selected_style
-                                            //     : Style.drawer_button_style
+                                            style: widget.isOrderSelected
+                                                ? Style
+                                                .drawer_button_selected_style
+                                                : Style.drawer_button_style
                                         ),
                                       )
                                     ],

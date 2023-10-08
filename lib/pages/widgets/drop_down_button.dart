@@ -19,7 +19,7 @@ class _DDButtonState extends State<DDButton> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
         border: Border.all(color: ColorsCode.primary_color),
@@ -27,11 +27,11 @@ class _DDButtonState extends State<DDButton> {
       child: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: DropdownButton(
-            underline: SizedBox(),
+            underline: const SizedBox(),
             isExpanded: true,
-            icon: Icon(Icons.arrow_drop_down),
+            icon: const Icon(Icons.arrow_drop_down),
             iconSize: 35,
-            hint: Text("Search"),
+            hint: const Text("Search"),
             value: valueChoose,
             onChanged: (newValue) {
               setState(() {
@@ -65,7 +65,7 @@ class _Custom_DDButtonState extends State<Custom_DDButton> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
         border: Border.all(color: ColorsCode.text_border_color),
@@ -73,11 +73,11 @@ class _Custom_DDButtonState extends State<Custom_DDButton> {
       child: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: DropdownButton(
-            underline: SizedBox(),
+            underline: const SizedBox(),
             isExpanded: true,
-            icon: Icon(Icons.arrow_drop_down),
+            icon: const Icon(Icons.arrow_drop_down),
             iconSize: 35,
-            hint: Text("Select"),
+            hint: const Text("Select"),
             value: valueChoose,
             onChanged: (newValue) {
               setState(() {

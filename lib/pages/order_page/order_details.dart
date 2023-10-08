@@ -23,7 +23,7 @@ class OrderDetails extends StatelessWidget {
         elevation: 0.0,
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
-        }, icon: Icon(Icons.menu, size: 25,)),
+        }, icon: const Icon(Icons.menu, size: 25,)),
         actions: <Widget>[
           IconButton(
             icon: const Stack(

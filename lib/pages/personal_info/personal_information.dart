@@ -21,8 +21,15 @@ class _Profile_InfoState extends State<Profile_Info> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawer,
-      drawer: Drawer(
-        child: MainDrawer(),
+      drawer: const Drawer(
+        child: MainDrawer(
+            isHomeSelected: false,
+            isProfileSelected: true,
+            isCreateBranchSelected: true,
+            isWalletSelected: true,
+            isTransactionSelected: true,
+            isOrderSelected: true
+        ),
       ),
       appBar: AppBar(
         centerTitle: true,
@@ -36,11 +43,11 @@ class _Profile_InfoState extends State<Profile_Info> {
         ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
-        }, icon: Icon(Icons.menu, size: 25,)),
+        }, icon: const Icon(Icons.menu, size: 25,)),
         actions: <Widget>[
           IconButton(
-            icon: Stack(
-              children: const [
+            icon: const Stack(
+              children: [
                 Icon(
                   Icons.notifications_none,
                   color: Colors.white,
@@ -69,7 +76,7 @@ class _Profile_InfoState extends State<Profile_Info> {
               decoration: const BoxDecoration(
                   color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
               ),
-              child: Center(
+              child: const Center(
                 child: Icon(
                   Icons.account_circle,
                   size: 80,
@@ -85,10 +92,10 @@ class _Profile_InfoState extends State<Profile_Info> {
                   child: Container(
                     height: Get.height * .05,
                     width: Get.width,
-                    decoration: BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(10))),
+                    decoration: const BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                     child: ExpansionTile(
                       title: Text("Personal Information" , style: TextStyle(color: Colors.white),),
                       children: [
@@ -126,10 +133,10 @@ class _Profile_InfoState extends State<Profile_Info> {
                   child: Container(
                     height: Get.height * .05,
                     width: Get.width,
-                    decoration: BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(10))),
+                    decoration: const BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                     child: ExpansionTile(
                       title: Text("Shop Address" , style: TextStyle(color: Colors.white),),
                       children: [

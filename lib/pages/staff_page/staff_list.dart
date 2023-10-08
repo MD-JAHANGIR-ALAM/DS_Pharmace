@@ -29,7 +29,7 @@ class StaffList extends StatelessWidget {
         ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
-        }, icon: Icon(Icons.menu, size: 25,)),
+        }, icon: const Icon(Icons.menu, size: 25,)),
         actions: <Widget>[
           IconButton(
             icon: const Stack(
@@ -63,7 +63,7 @@ class StaffList extends StatelessWidget {
                   Container(
                     height: 50,
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                     ),
                   ),
@@ -183,14 +183,14 @@ class StaffList extends StatelessWidget {
                                       child: Container(
                                         height: 30,
                                         width: 80,
-                                        decoration: BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(12))),
-                                        child: Center(
+                                        decoration: const BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(12))),
+                                        child: const Center(
                                           child: Text("Edit", style: TextStyle(color: Colors.white),),
                                         ),
                                       ),
                                     ),
                                   ),
-                                  SizedBox(height: 5,)
+                                  const SizedBox(height: 5,)
                                 ],
                               ),
                             ),

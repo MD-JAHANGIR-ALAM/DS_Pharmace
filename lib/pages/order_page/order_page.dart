@@ -25,7 +25,7 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawer,
-      drawer: Drawer(
+      drawer: const Drawer(
         child: MainDrawer(),
       ),
       appBar: AppBar(
@@ -40,11 +40,11 @@ class _OrderPageState extends State<OrderPage> {
         ),
         leading: IconButton(onPressed: (){
           _drawer.currentState!.openDrawer();
-        }, icon: Icon(Icons.menu, size: 25,)),
+        }, icon: const Icon(Icons.menu, size: 25,)),
         actions: <Widget>[
           IconButton(
-            icon: Stack(
-              children: const [
+            icon: const Stack(
+              children: [
                 Icon(
                   Icons.notifications_none,
                   color: Colors.white,
@@ -74,16 +74,16 @@ class _OrderPageState extends State<OrderPage> {
               Container(
                 height: Get.height * .05,
                 width: Get.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, top: 10),
+              const Padding(
+                padding: EdgeInsets.only(left: 15, top: 10),
                 child: Text("Order", style: Style.dashboardBlackText700,),
               ),
               Style.distan_size5,
-              Divider(
+              const Divider(
                 height: 3,
               ),
               Style.distan_size5,
@@ -92,23 +92,23 @@ class _OrderPageState extends State<OrderPage> {
                 child: ButtonsTabBar(
                   backgroundColor: ColorsCode.primary_color,
                   labelStyle:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   tabs: [
                     Tab(
-                      child: Container(
+                      child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,
                           child: Center(child: Text("Waiting to Confirm/\nAssign to Heroboy", style: TextStyle(color: Colors.black),))
                       ),
                     ),
                     Tab(
-                      child: Container(
+                      child: SizedBox(
                           width: MediaQuery.of(context).size.width / 2.4,
-                          child: Center(child: Text("Complete", style: TextStyle(color: Colors.black)))),
+                          child: const Center(child: Text("Complete", style: TextStyle(color: Colors.black)))),
                     ),
                   ],
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: TabBarView(
                   children: <Widget>[
                     SubPage_1(),

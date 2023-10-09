@@ -2,6 +2,7 @@ import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:ds_pharmace/pages/order_page/by_seller.dart';
 import 'package:flutter/material.dart';
 import '../../utils/colors_code.dart';
+import 'by_heroboy.dart';
 
 class SubPage_2 extends StatelessWidget {
   const SubPage_2({super.key});
@@ -38,9 +39,7 @@ class SubPage_2 extends StatelessWidget {
                 child: TabBarView(
                   children: <Widget>[
                     SubPage201(),
-                    Center(
-                      child: Icon(Icons.directions_transit),
-                    ),
+                    ByHeroboy(),
                   ],
                 ),
               ),

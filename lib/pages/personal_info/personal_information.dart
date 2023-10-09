@@ -23,12 +23,7 @@ class _Profile_InfoState extends State<Profile_Info> {
       key: _drawer,
       drawer: const Drawer(
         child: MainDrawer(
-            isHomeSelected: false,
             isProfileSelected: true,
-            isCreateBranchSelected: true,
-            isWalletSelected: true,
-            isTransactionSelected: true,
-            isOrderSelected: true
         ),
       ),
       appBar: AppBar(

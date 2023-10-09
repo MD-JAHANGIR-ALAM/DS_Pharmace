@@ -5,10 +5,12 @@ class SubPage_1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return const SizedBox(
       height: double.infinity,
       width: double.infinity,
-      color: Colors.white,
+      child: Center(
+        child: Text("No Data"),
+      ),
     );
   }
 }

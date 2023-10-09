@@ -15,7 +15,7 @@ class StaffList extends StatelessWidget {
     return Scaffold(
       key: _drawer,
       drawer: const Drawer(
-        child: MainDrawer(),
+        child: MainDrawer(isStuffListSelected: true),
       ),
       appBar: AppBar(
         centerTitle: true,
@@ -57,148 +57,147 @@ class StaffList extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Stack(
-                clipBehavior: Clip.none,
+              Container(
+                height: 50,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                    color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    height: 50,
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                        color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
-                    ),
-                  ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 60),
-                    child: Positioned(
-                      top: 50,
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: 2,
-                        itemBuilder: (context, index){
-                          return Padding(
-                            padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
-                            child: Card(
-                              child: Column(
-                                children: [
-                                  const Padding(
-                                    padding: EdgeInsets.all(5.0),
-                                    child: Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 80,
-                                          child: CircleAvatar(
-                                            radius: 40,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 270,
-                                          child: Column(
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 10),
-                                                child: Row(
-                                                  children: [
-                                                    SizedBox(
-                                                      width: 100,
-                                                      child: Text("Name", style: Style.text_hind_style,),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 10,
-                                                      child: Text(":", style: Style.text_hind_style),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 150,
-                                                      child: Text("Jahangir", style: Style.text_hind_style),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 10),
-                                                child: Row(
-                                                  children: [
-                                                    SizedBox(
-                                                      width: 100,
-                                                      child: Text("Designation", style: Style.text_hind_style,),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 10,
-                                                      child: Text(":", style: Style.text_hind_style),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 150,
-                                                      child: Text("I am a Flutter Apps Developer", style: Style.text_hind_style),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 10),
-                                                child: Row(
-                                                  children: [
-                                                    SizedBox(
-                                                      width: 100,
-                                                      child: Text("E-mail", style: Style.text_hind_style,),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 10,
-                                                      child: Text(":", style: Style.text_hind_style),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 150,
-                                                      child: Text("jahangirad14@gmail.com", style: Style.text_hind_style),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsets.only(left: 10),
-                                                child: Row(
-                                                  children: [
-                                                    SizedBox(
-                                                      width: 100,
-                                                      child: Text("Contact Number", style: Style.text_hind_style,),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 10,
-                                                      child: Text(":", style: Style.text_hind_style),
-                                                    ),
-                                                    SizedBox(
-                                                      width: 150,
-                                                      child: Text("01796196500", style: Style.text_hind_style),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: Alignment.bottomRight,
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(right: 20),
-                                      child: Container(
-                                        height: 30,
-                                        width: 80,
-                                        decoration: const BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(12))),
-                                        child: const Center(
-                                          child: Text("Edit", style: TextStyle(color: Colors.white),),
-                                        ),
+                    padding: const EdgeInsets.only(left: 15, top: 10),
+                    child: const Text("Staff List", style: Style.dashboardBlackText700,),
+                  ),
+                  Style.distan_size10,
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: 2,
+                    itemBuilder: (context, index){
+                      return Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10,),
+                        child: Card(
+                          child: Column(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.all(5.0),
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 80,
+                                      child: CircleAvatar(
+                                        radius: 40,
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 5,)
-                                ],
+                                    SizedBox(
+                                      width: 270,
+                                      child: Column(
+                                        children: [
+                                          Padding(
+                                            padding: EdgeInsets.only(left: 10),
+                                            child: Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: 100,
+                                                  child: Text("Name", style: Style.text_hind_style,),
+                                                ),
+                                                SizedBox(
+                                                  width: 10,
+                                                  child: Text(":", style: Style.text_hind_style),
+                                                ),
+                                                SizedBox(
+                                                  width: 150,
+                                                  child: Text("Jahangir", style: Style.text_hind_style),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(left: 10),
+                                            child: Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: 100,
+                                                  child: Text("Designation", style: Style.text_hind_style,),
+                                                ),
+                                                SizedBox(
+                                                  width: 10,
+                                                  child: Text(":", style: Style.text_hind_style),
+                                                ),
+                                                SizedBox(
+                                                  width: 150,
+                                                  child: Text("I am a Flutter Apps Developer", style: Style.text_hind_style),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(left: 10),
+                                            child: Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: 100,
+                                                  child: Text("E-mail", style: Style.text_hind_style,),
+                                                ),
+                                                SizedBox(
+                                                  width: 10,
+                                                  child: Text(":", style: Style.text_hind_style),
+                                                ),
+                                                SizedBox(
+                                                  width: 150,
+                                                  child: Text("jahangirad14@gmail.com", style: Style.text_hind_style),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(left: 10),
+                                            child: Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: 100,
+                                                  child: Text("Contact Number", style: Style.text_hind_style,),
+                                                ),
+                                                SizedBox(
+                                                  width: 10,
+                                                  child: Text(":", style: Style.text_hind_style),
+                                                ),
+                                                SizedBox(
+                                                  width: 150,
+                                                  child: Text("01796196500", style: Style.text_hind_style),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  )
+                              Align(
+                                alignment: Alignment.bottomRight,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 20),
+                                  child: Container(
+                                    height: 30,
+                                    width: 80,
+                                    decoration: const BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(12))),
+                                    child: const Center(
+                                      child: Text("Edit", style: TextStyle(color: Colors.white),),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 10,)
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
                 ],
               )
             ],

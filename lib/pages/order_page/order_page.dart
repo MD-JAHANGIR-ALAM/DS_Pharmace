@@ -1,6 +1,6 @@
 import 'package:ds_pharmace/pages/drawer_page/drawer_page.dart';
-import 'package:ds_pharmace/pages/order_page/sub_page_1.dart';
-import 'package:ds_pharmace/pages/order_page/sub_page_2.dart';
+import 'package:ds_pharmace/pages/order_page/waiting_to_confirm.dart';
+import 'package:ds_pharmace/pages/order_page/complete_page.dart';
 import 'package:flutter/material.dart';
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:get/get.dart';
@@ -26,7 +26,7 @@ class _OrderPageState extends State<OrderPage> {
     return Scaffold(
       key: _drawer,
       drawer: const Drawer(
-        child: MainDrawer(),
+        child: MainDrawer(isOrderSelected: true),
       ),
       appBar: AppBar(
         centerTitle: true,

@@ -4,6 +4,7 @@ import '../../utils/colors_code.dart';
 import '../../utils/images.dart';
 import '../../utils/styles.dart';
 import '../drawer_page/drawer_page.dart';
+import 'add_wallet.dart';
 
 class WalletPage extends StatelessWidget {
   WalletPage({super.key});
@@ -15,7 +16,7 @@ class WalletPage extends StatelessWidget {
     return Scaffold(
       key: _drawer,
       drawer: const Drawer(
-        child: MainDrawer(),
+        child: MainDrawer(isWalletSelected: true),
       ),
       appBar: AppBar(
         centerTitle: true,
@@ -99,7 +100,9 @@ class WalletPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>AddWallet()));
+                          },
                           child: Container(
                             height: Get.height * .06,
                             width: Get.width / 2.3,

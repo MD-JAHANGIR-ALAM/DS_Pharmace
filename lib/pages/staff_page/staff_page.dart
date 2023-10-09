@@ -18,7 +18,7 @@ class StaffPage extends StatelessWidget {
     return Scaffold(
       key: _drawer,
       drawer: const Drawer(
-        child: MainDrawer(),
+        child: MainDrawer(isAddStuffSelected: true),
       ),
       appBar: AppBar(
         centerTitle: true,

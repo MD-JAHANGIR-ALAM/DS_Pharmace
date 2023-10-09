@@ -17,7 +17,7 @@ class TransactionPage extends StatelessWidget {
     return Scaffold(
       key: _drawer,
       drawer: const Drawer(
-        child: MainDrawer(),
+        child: MainDrawer(isTransactionSelected: true),
       ),
       appBar: AppBar(
         centerTitle: true,

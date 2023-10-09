@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       key: _drawer,
       drawer: const Drawer(
-        child: MainDrawer(),
+        child: MainDrawer(isHomeSelected: true),
       ),
       appBar: AppBar(
         centerTitle: true,
@@ -96,7 +96,8 @@ class _HomePageState extends State<HomePage> {
                 return Container(
                   height: Get.height * .200,
                   width: Get.width * .750,
-                  color: ColorsCode.primary_color,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Image.asset(Images.logo),
                 );
               },
               options: CarouselOptions(

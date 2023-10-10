@@ -7,8 +7,10 @@ import '../../transaction_page/transaction_page.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/images.dart';
 import '../../utils/styles.dart';
+import '../create_branch/branch_list.dart';
 import '../create_branch/create_branch.dart';
 import '../home_page/homepage.dart';
+import '../medicine_setup/medicine_list.dart';
 import '../medicine_setup/medicine_setup.dart';
 import '../order_page/order_page.dart';
 import '../personal_info/personal_information.dart';
@@ -477,7 +479,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBranch()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicineList()));
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -645,7 +647,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                //Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffList()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>BranchList()));
                               },
                               child: Container(
                                   height: Get.height * .05,

@@ -75,12 +75,19 @@ class AddMedicine extends StatelessWidget {
                 ],
               ),
               Style.distan_size10,
-              Row(
-                children: [
-                  TextButton(onPressed: (){}, child: Text("Cancel", style: TextStyle(color: Colors.black12),)),
-                  Style.widthdistan_size10,
-                  TextButton(onPressed: (){}, child: Text("Confirm", style: TextStyle(color: ColorsCode.primary_color),))
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 140),
+                child: Row(
+                  children: [
+                    TextButton(onPressed: (){
+                      Navigator.pop(context);
+                    }, child: Text("Cancel", style: TextStyle(color: Colors.black12),)),
+                    Style.widthdistan_size10,
+                    TextButton(onPressed: (){
+
+                    }, child: Text("Confirm", style: TextStyle(color: ColorsCode.primary_color),))
+                  ],
+                ),
               ),
             ],
           ),

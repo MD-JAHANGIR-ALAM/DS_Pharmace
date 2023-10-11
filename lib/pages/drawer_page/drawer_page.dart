@@ -13,7 +13,6 @@ import '../home_page/homepage.dart';
 import '../medicine_setup/medicine_list.dart';
 import '../medicine_setup/medicine_setup.dart';
 import '../order_page/order_page.dart';
-import '../personal_info/personal_information.dart';
 import '../staff_page/staff_list.dart';
 import '../staff_page/staff_page.dart';
 import '../wallet_page/wallet_page.dart';
@@ -93,7 +92,7 @@ class _MainDrawerState extends State<MainDrawer> {
                           child: Column(children: [
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                                Navigator.pushNamed(context, "/");
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -146,7 +145,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile_Info()));
+                                Navigator.pushNamed(context, "Profile");
                               },
                               child: Container(
                                   height: Get.height * 0.05,
@@ -199,7 +198,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateBranch()));
+                                Navigator.pushNamed(context, "CreateBranch");
                               },
                               child: Container(
                                   height: Get.height * 0.05,
@@ -255,7 +254,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>WalletPage()));
+                                Navigator.pushNamed(context, "WalletPage");
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -311,7 +310,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>TransactionPage()));
+                                Navigator.pushNamed(context, "TransactionPage");
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -367,7 +366,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>OrderPage()));
+                                Navigator.pushNamed(context, "OrderPage");
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -423,7 +422,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicineSetup()));
+                                Navigator.pushNamed(context, "MedicineSetup");
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -479,7 +478,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>MedicineList()));
+                                Navigator.pushNamed(context, "MedicineList");
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -535,7 +534,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffPage()));
+                                Navigator.pushNamed(context, "StaffPage");
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -591,7 +590,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>StaffList()));
+                                Navigator.pushNamed(context, "StaffList");
                               },
                               child: Container(
                                   height: Get.height * .05,
@@ -647,7 +646,7 @@ class _MainDrawerState extends State<MainDrawer> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>BranchList()));
+                                Navigator.pushNamed(context, "BranchList");
                               },
                               child: Container(
                                   height: Get.height * .05,

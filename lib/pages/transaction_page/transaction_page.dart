@@ -1,11 +1,10 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../pages/drawer_page/drawer_page.dart';
-import '../utils/colors_code.dart';
-import '../utils/images.dart';
-import '../utils/styles.dart';
+import '../../utils/colors_code.dart';
+import '../../utils/images.dart';
+import '../../utils/styles.dart';
+import '../drawer_page/drawer_page.dart';
 
 class TransactionPage extends StatelessWidget {
   TransactionPage({super.key});
@@ -102,7 +101,7 @@ class TransactionPage extends StatelessWidget {
               const Expanded(
                 child: TabBarView(
                   children: <Widget>[
-                    //Input your page
+                    //Input here your page
                   ],
                 ),
               ),

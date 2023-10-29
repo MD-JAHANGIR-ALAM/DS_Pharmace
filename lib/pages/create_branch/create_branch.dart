@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../utils/colors_code.dart';
@@ -22,12 +21,11 @@ class _CreateBranchState extends State<CreateBranch> {
   File? image;
 
   Future _getImage() async {
-    final XFile? pickedFile = await ImagePicker().pickImage(source: ImageSource.camera, imageQuality: 80);
+    final XFile? pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery, imageQuality: 80);
 
     if(pickedFile == null)return;
     setState(() {
       image = File(pickedFile.path);
-      print(image);
     });
   }
 
@@ -47,24 +45,30 @@ class _CreateBranchState extends State<CreateBranch> {
                   Style.distan_size20,
                   const Text("Branch Name", style: Style.dashboardBlackText400,),
                   Style.distan_size5,
-                  TextFormField(
-                    textInputAction: TextInputAction.next,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: ColorsCode.primary_color),
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: ColorsCode.primary_color),
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      hintText: "Branch Name",
-                      hintStyle: Style.text_hind_style,
+                  Container(
+                    height: Get.height * .06,
+                    width: Get.width,
+                    decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
+                        borderRadius: const BorderRadius.all(Radius.circular(12))),
+                    child: TextFormField(
+                      textInputAction: TextInputAction.next,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide(color: ColorsCode.primary_color),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: ColorsCode.primary_color),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        hintText: "Branch Name",
+                        hintStyle: Style.text_hind_style,
+                      ),
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return "Branch name";
+                        }
+                        return null;
+                      },
                     ),
-                    validator: (value){
-                      if(value!.isEmpty){
-                        return "Branch name";
-                      }
-                      return null;
-                    },
                   ),
                   Style.distan_size5,
                   const Text("Branch Location", style: Style.dashboardBlackText400,),
@@ -73,24 +77,30 @@ class _CreateBranchState extends State<CreateBranch> {
                   Style.distan_size5,
                   const Text("Trade license number", style: Style.dashboardBlackText400,),
                   Style.distan_size5,
-                  TextFormField(
-                    textInputAction: TextInputAction.next,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: ColorsCode.primary_color),
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: ColorsCode.primary_color),
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      hintText: "Trade license number",
-                      hintStyle: Style.text_hind_style,
+                  Container(
+                    height: Get.height * .06,
+                    width: Get.width,
+                    decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
+                        borderRadius: const BorderRadius.all(Radius.circular(12))),
+                    child: TextFormField(
+                      textInputAction: TextInputAction.next,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide(color: ColorsCode.primary_color),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: ColorsCode.primary_color),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        hintText: "Trade license number",
+                        hintStyle: Style.text_hind_style,
+                      ),
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return "Trade license number";
+                        }
+                        return null;
+                      },
                     ),
-                    validator: (value){
-                      if(value!.isEmpty){
-                        return "Trade license number";
-                      }
-                      return null;
-                    },
                   ),
                   Style.distan_size5,
                   GestureDetector(
@@ -110,24 +120,30 @@ class _CreateBranchState extends State<CreateBranch> {
                   Style.distan_size5,
                   const Text("Phone number", style: Style.dashboardBlackText400,),
                   Style.distan_size5,
-                  TextFormField(
-                    textInputAction: TextInputAction.next,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: ColorsCode.primary_color),
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: ColorsCode.primary_color),
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      hintText: "Phone number",
-                      hintStyle: Style.text_hind_style,
+                  Container(
+                    height: Get.height * .06,
+                    width: Get.width,
+                    decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
+                        borderRadius: const BorderRadius.all(Radius.circular(12))),
+                    child: TextFormField(
+                      textInputAction: TextInputAction.next,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(
+                            borderSide: BorderSide(color: ColorsCode.primary_color),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: ColorsCode.primary_color),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        hintText: "Phone number",
+                        hintStyle: Style.text_hind_style,
+                      ),
+                      validator: (value){
+                        if(value!.isEmpty){
+                          return "Phone number";
+                        }
+                        return null;
+                      },
                     ),
-                    validator: (value){
-                      if(value!.isEmpty){
-                        return "Phone number";
-                      }
-                      return null;
-                    },
                   ),
                   Style.distan_size5,
                   GestureDetector(
@@ -166,7 +182,7 @@ class _CreateBranchState extends State<CreateBranch> {
                       GestureDetector(
                         onTap: (){
                           if(_formKey.currentState!.validate()){
-                            return null;
+                            return;
                           }
                         },
                         child: Container(

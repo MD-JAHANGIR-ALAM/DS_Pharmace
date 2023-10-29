@@ -3,19 +3,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../transaction_page/transaction_page.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/images.dart';
 import '../../utils/styles.dart';
-import '../create_branch/branch_list.dart';
-import '../create_branch/create_branch.dart';
-import '../home_page/homepage.dart';
-import '../medicine_setup/medicine_list.dart';
-import '../medicine_setup/medicine_setup.dart';
-import '../order_page/order_page.dart';
-import '../staff_page/staff_list.dart';
-import '../staff_page/staff_page.dart';
-import '../wallet_page/wallet_page.dart';
 
 
 class MainDrawer extends StatefulWidget {
@@ -54,7 +44,7 @@ class _MainDrawerState extends State<MainDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      //width: MediaQuery.of(context).size.width,//Get.size.width * 0.60,
+      width: 50,
       child: Column(
         children: [
           Expanded(

@@ -1,5 +1,6 @@
 import 'package:ds_pharmace/pages/staff_page/staff_list.dart';
 import 'package:ds_pharmace/pages/staff_page/staff_page.dart';
+import 'package:ds_pharmace/pages/transaction_page/transaction_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'pages/create_branch/branch_list.dart';
@@ -9,8 +10,10 @@ import 'pages/medicine_setup/medicine_list.dart';
 import 'pages/medicine_setup/medicine_setup.dart';
 import 'pages/order_page/order_page.dart';
 import 'pages/personal_info/personal_information.dart';
+import 'pages/wallet_page/add_wallet.dart';
 import 'pages/wallet_page/wallet_page.dart';
-import 'transaction_page/transaction_page.dart';
+
+
 
 void main() {
   runApp(const MyAPP());
@@ -35,6 +38,7 @@ class MyAPP extends StatelessWidget {
         'StaffPage': (context) => StaffPage(),
         'StaffList': (context) => StaffList(),
         'BranchList': (context) => BranchList(),
+        'AddWallet': (context) => const AddWallet(),
       },
       title: "DS Pharmacy",
       debugShowCheckedModeBanner: false,

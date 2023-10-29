@@ -101,7 +101,7 @@ class WalletPage extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>AddWallet()));
+                            Navigator.pushNamed(context, "AddWallet");
                           },
                           child: Container(
                             height: Get.height * .06,

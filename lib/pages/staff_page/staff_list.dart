@@ -181,12 +181,17 @@ class StaffList extends StatelessWidget {
                                 alignment: Alignment.bottomRight,
                                 child: Padding(
                                   padding: const EdgeInsets.only(right: 20),
-                                  child: Container(
-                                    height: 30,
-                                    width: 80,
-                                    decoration: const BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(12))),
-                                    child: const Center(
-                                      child: Text("Edit", style: TextStyle(color: Colors.white),),
+                                  child: GestureDetector(
+                                    onTap: (){
+                                      Navigator.pushNamed(context, "StaffPage");
+                                    },
+                                    child: Container(
+                                      height: 30,
+                                      width: 80,
+                                      decoration: const BoxDecoration(color: ColorsCode.primary_color, borderRadius: BorderRadius.all(Radius.circular(12))),
+                                      child: const Center(
+                                        child: Text("Edit", style: TextStyle(color: Colors.white),),
+                                      ),
                                     ),
                                   ),
                                 ),

@@ -94,25 +94,25 @@ class _Profile_InfoState extends State<Profile_Info> {
                     child: ExpansionTile(
                       title: Text("Personal Information" , style: TextStyle(color: Colors.white),),
                       children: [
-                        Card(
-                          child: Padding(
-                            padding: EdgeInsets.all(15),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Name : MD. Jahangir Mia"),
-                                Divider(
-                                  height: 3,
-                                ),
-                                Text("Phone : 01796-196500"),
-                                Divider(
-                                  height: 3,
-                                ),
-                                Text("Email : jahangirad14@gmail.com"),
-                                Style.distan_size10,
-                              ],
-                            ),
+                        Padding(
+                          padding: EdgeInsets.all(15),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("Name : MD. Jahangir Mia"),
+                              Divider(
+                                height: 3,
+                              ),
+                              Text("Phone : 01796-196500"),
+                              Divider(
+                                height: 3,
+                              ),
+                              Text("Email : jahangirad14@gmail.com"),
+                              Divider(
+                                height: 3,
+                              ),
+                            ],
                           ),
                         )
                       ],
@@ -120,7 +120,6 @@ class _Profile_InfoState extends State<Profile_Info> {
                 )
               ],
             ),
-            Style.distan_size15,
             Stack(
               children: [
                 Padding(
@@ -151,7 +150,9 @@ class _Profile_InfoState extends State<Profile_Info> {
                                   height: 3,
                                 ),
                                 Text("Address : Sundarganj, Gaibandha"),
-                                Style.distan_size10,
+                                Divider(
+                                  height: 3,
+                                ),
                               ],
                             ),
                           ),

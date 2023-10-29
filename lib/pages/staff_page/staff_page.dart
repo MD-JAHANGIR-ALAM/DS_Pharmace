@@ -78,46 +78,74 @@ class StaffPage extends StatelessWidget {
                     Style.distan_size5,
                     const Text("Staff Name", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    const TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Name',
+                    SizedBox(
+                      height: Get.height * .06,
+                      width: Get.width,
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(12))
+                          ),
+                          labelText: 'Name',
+                        ),
                       ),
                     ),
                     Style.distan_size5,
                     const Text("Designation", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    const TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Designation',
+                    SizedBox(
+                      height: Get.height * .06,
+                      width: Get.width,
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(12))
+                          ),
+                          labelText: 'Designation',
+                        ),
                       ),
                     ),
                     Style.distan_size5,
-                    const Custom_DDButton(),
+                    SizedBox(
+                      height: Get.height * .06,
+                      width: Get.width,
+                      child: const Custom_DDButton(),
+                    ),
                     Style.distan_size5,
                     const Text("Surename", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    const TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Surename',
+                    SizedBox(
+                      height: Get.height * .06,
+                      width: Get.width,
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(12))
+                          ),
+                          labelText: 'Surename',
+                        ),
                       ),
                     ),
                     Style.distan_size5,
                     const Text("Contact number", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    const TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Number',
+                    SizedBox(
+                      height: Get.height * .06,
+                      width: Get.width,
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(12))
+                          ),
+                          labelText: 'Number',
+                        ),
                       ),
                     ),
                     Style.distan_size5,
                     GestureDetector(
                       onTap: (){},
                       child: Container(
-                        height: Get.height * .05,
+                        height: Get.height * .06,
                         width: Get.width,
                         decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
                             borderRadius: BorderRadius.all(Radius.circular(12))),
@@ -129,26 +157,38 @@ class StaffPage extends StatelessWidget {
                     Style.distan_size5,
                     const Text("Password", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    const TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Password',
+                    SizedBox(
+                      height: Get.height * .06,
+                      width: Get.width,
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(12))
+                          ),
+                          labelText: 'Password',
+                        ),
                       ),
                     ),
                     Style.distan_size5,
                     const Text("Confirm password", style: Style.dashboardBlackText400,),
                     Style.distan_size5,
-                    const TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Confirm password',
+                    SizedBox(
+                      height: Get.height * .06,
+                      width: Get.width,
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(12))
+                          ),
+                          labelText: 'Confirm password',
+                        ),
                       ),
                     ),
                     Style.distan_size5,
                     GestureDetector(
                       onTap: (){},
                       child: Container(
-                        height: Get.height * .05,
+                        height: Get.height * .06,
                         width: Get.width,
                         decoration: BoxDecoration(color: ColorsCode.primary_color, border: Border.all(color: ColorsCode.primary_color),
                             borderRadius: const BorderRadius.all(Radius.circular(12))),

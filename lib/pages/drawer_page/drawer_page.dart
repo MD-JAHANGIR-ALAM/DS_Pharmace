@@ -44,7 +44,6 @@ class _MainDrawerState extends State<MainDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      width: 50,
       child: Column(
         children: [
           Expanded(

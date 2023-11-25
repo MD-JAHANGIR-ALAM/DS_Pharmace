@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import '../../utils/colors_code.dart';
 import '../../utils/images.dart';
@@ -69,13 +70,59 @@ class _Profile_InfoState extends State<Profile_Info> {
               height: Get.height * .150,
               width: Get.width,
               decoration: const BoxDecoration(
-                  color: ColorsCode.primary_color, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
+                color: ColorsCode.primary_color,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10)),
               ),
-              child: const Center(
-                child: Icon(
-                  Icons.account_circle,
-                  size: 80,
-                  color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.account_circle,
+                      size: 80,
+                      color: Colors.white,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Jahangir",
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 20, fontFamily: "Roboto"),
+                        ),
+                        Row(
+                          children: [
+                            RatingBar.builder(
+                              itemSize: 20.0,
+                              initialRating: 3,
+                              minRating: 1,
+                              direction: Axis.horizontal,
+                              allowHalfRating: true,
+                              itemCount: 5,
+                              itemPadding: const EdgeInsets.symmetric(horizontal: 0),
+                              itemBuilder: (context, _) => const Icon(
+                                Icons.star,
+                                color: Colors.amber,
+                                size: 5,
+                              ),
+                              onRatingUpdate: (rating) {
+                                print(rating);
+                              },
+                            ),
+                            Style.widthdistan_size5,
+                            const Text(
+                              "(0 review)",
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 10, fontFamily: "Roboto"),
+                            ),
+                          ],
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ),
             ),
@@ -100,15 +147,15 @@ class _Profile_InfoState extends State<Profile_Info> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Name : MD. Jahangir Mia"),
+                              Text("Name : MD. Jahangir Mia", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                               Divider(
                                 height: 3,
                               ),
-                              Text("Phone : 01796-196500"),
+                              Text("Phone : 01796-196500", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                               Divider(
                                 height: 3,
                               ),
-                              Text("Email : jahangirad14@gmail.com"),
+                              Text("Email : jahangirad14@gmail.com", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                               Divider(
                                 height: 3,
                               ),
@@ -141,15 +188,15 @@ class _Profile_InfoState extends State<Profile_Info> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Shop No : 1"),
+                                Text("Shop No : 1", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Name : My Shop"),
+                                Text("Name : My Shop", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Address : Sundarganj, Gaibandha"),
+                                Text("Address : Sundarganj, Gaibandha", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
@@ -164,15 +211,15 @@ class _Profile_InfoState extends State<Profile_Info> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Shop No : 2"),
+                                Text("Shop No : 2", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Name : My Shop"),
+                                Text("Name : My Shop", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Address : Sundarganj, Gaibandha"),
+                                Text("Address : Sundarganj, Gaibandha", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Style.distan_size10,
                               ],
                             ),
@@ -185,15 +232,15 @@ class _Profile_InfoState extends State<Profile_Info> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Shop No : 3"),
+                                Text("Shop No : 3", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Name : My Shop"),
+                                Text("Name : My Shop", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Address : Sundarganj, Gaibandha"),
+                                Text("Address : Sundarganj, Gaibandha", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Style.distan_size10,
                               ],
                             ),
@@ -206,15 +253,15 @@ class _Profile_InfoState extends State<Profile_Info> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Shop No : 4"),
+                                Text("Shop No : 4", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Name : My Shop"),
+                                Text("Name : My Shop", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Address : Sundarganj, Gaibandha"),
+                                Text("Address : Sundarganj, Gaibandha", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Style.distan_size10,
                               ],
                             ),
@@ -227,15 +274,15 @@ class _Profile_InfoState extends State<Profile_Info> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Shop No : 5"),
+                                Text("Shop No : 5", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Name : My Shop"),
+                                Text("Name : My Shop", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Divider(
                                   height: 3,
                                 ),
-                                Text("Address : Sundarganj, Gaibandha"),
+                                Text("Address : Sundarganj, Gaibandha", style: TextStyle(fontSize: 16, fontFamily: "Roboto"),),
                                 Style.distan_size10,
                               ],
                             ),

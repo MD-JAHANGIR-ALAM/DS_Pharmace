@@ -50,24 +50,22 @@ class _CreateBranchState extends State<CreateBranch> {
                     width: Get.width,
                     decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                         borderRadius: const BorderRadius.all(Radius.circular(12))),
-                    child: TextFormField(
-                      textInputAction: TextInputAction.next,
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(
-                            borderSide: BorderSide(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        hintText: "Branch Name",
-                        hintStyle: Style.text_hind_style,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: TextFormField(
+                        textInputAction: TextInputAction.next,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Branch Name",
+                          hintStyle: Style.text_hind_style,
+                        ),
+                        validator: (value){
+                          if(value!.isEmpty){
+                            return "Branch name";
+                          }
+                          return null;
+                        },
                       ),
-                      validator: (value){
-                        if(value!.isEmpty){
-                          return "Branch name";
-                        }
-                        return null;
-                      },
                     ),
                   ),
                   Style.distan_size5,
@@ -82,24 +80,22 @@ class _CreateBranchState extends State<CreateBranch> {
                     width: Get.width,
                     decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                         borderRadius: const BorderRadius.all(Radius.circular(12))),
-                    child: TextFormField(
-                      textInputAction: TextInputAction.next,
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(
-                            borderSide: BorderSide(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        hintText: "Trade license number",
-                        hintStyle: Style.text_hind_style,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: TextFormField(
+                        textInputAction: TextInputAction.next,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Trade license number",
+                          hintStyle: Style.text_hind_style,
+                        ),
+                        validator: (value){
+                          if(value!.isEmpty){
+                            return "Trade license number";
+                          }
+                          return null;
+                        },
                       ),
-                      validator: (value){
-                        if(value!.isEmpty){
-                          return "Trade license number";
-                        }
-                        return null;
-                      },
                     ),
                   ),
                   Style.distan_size5,
@@ -125,24 +121,22 @@ class _CreateBranchState extends State<CreateBranch> {
                     width: Get.width,
                     decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                         borderRadius: const BorderRadius.all(Radius.circular(12))),
-                    child: TextFormField(
-                      textInputAction: TextInputAction.next,
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(
-                            borderSide: BorderSide(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: ColorsCode.primary_color),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
-                        hintText: "Phone number",
-                        hintStyle: Style.text_hind_style,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: TextFormField(
+                        textInputAction: TextInputAction.next,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Phone number",
+                          hintStyle: Style.text_hind_style,
+                        ),
+                        validator: (value){
+                          if(value!.isEmpty){
+                            return "Phone number";
+                          }
+                          return null;
+                        },
                       ),
-                      validator: (value){
-                        if(value!.isEmpty){
-                          return "Phone number";
-                        }
-                        return null;
-                      },
                     ),
                   ),
                   Style.distan_size5,

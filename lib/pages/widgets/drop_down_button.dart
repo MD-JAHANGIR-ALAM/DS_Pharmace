@@ -114,7 +114,7 @@ class _BankAccountState extends State<BankAccount> {
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
-        border: Border.all(color: ColorsCode.text_border_color),
+        border: Border.all(color: ColorsCode.primary_color),
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),
@@ -160,7 +160,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
-        border: Border.all(color: ColorsCode.text_border_color),
+        border: Border.all(color: ColorsCode.primary_color),
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),
@@ -204,7 +204,7 @@ class _AccountState extends State<Account> {
         borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
-        border: Border.all(color: ColorsCode.text_border_color),
+        border: Border.all(color: ColorsCode.primary_color),
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10),

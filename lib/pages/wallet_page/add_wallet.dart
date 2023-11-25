@@ -30,24 +30,18 @@ class AddWallet extends StatelessWidget {
               Container(
                 height: Get.height * .06,
                 width: Get.width,
-                decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
-                    borderRadius: const BorderRadius.all(Radius.circular(12))),
                 child: const BankAccount(),
               ),
               Style.distan_size5,
               Container(
                 height: Get.height * .06,
                 width: Get.width,
-                decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
-                    borderRadius: const BorderRadius.all(Radius.circular(12))),
                 child: const PaymentMethod(),
               ),
               Style.distan_size5,
               Container(
                 height: Get.height * .06,
                 width: Get.width,
-                decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
-                    borderRadius: const BorderRadius.all(Radius.circular(12))),
                 child: const Account(),
               ),
               Style.distan_size10,
@@ -58,17 +52,15 @@ class AddWallet extends StatelessWidget {
                 width: Get.width,
                 decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                     borderRadius: const BorderRadius.all(Radius.circular(12))),
-                child: TextFormField(
-                  textInputAction: TextInputAction.next,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(color: ColorsCode.primary_color),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: ColorsCode.primary_color),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    hintText: "Account no",
-                    hintStyle: Style.text_hind_style,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: TextFormField(
+                    textInputAction: TextInputAction.next,
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Account no",
+                      hintStyle: Style.text_hind_style,
+                    ),
                   ),
                 ),
               ),
@@ -80,17 +72,15 @@ class AddWallet extends StatelessWidget {
                 width: Get.width,
                 decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                     borderRadius: const BorderRadius.all(Radius.circular(12))),
-                child: TextFormField(
-                  textInputAction: TextInputAction.next,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(color: ColorsCode.primary_color),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: ColorsCode.primary_color),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    hintText: "Account name",
-                    hintStyle: Style.text_hind_style,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: TextFormField(
+                    textInputAction: TextInputAction.next,
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Account name",
+                      hintStyle: Style.text_hind_style,
+                    ),
                   ),
                 ),
               ),
@@ -102,17 +92,15 @@ class AddWallet extends StatelessWidget {
                 width: Get.width,
                 decoration: BoxDecoration(border: Border.all(color: ColorsCode.primary_color),
                     borderRadius: const BorderRadius.all(Radius.circular(12))),
-                child: TextFormField(
-                  textInputAction: TextInputAction.next,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(color: ColorsCode.primary_color),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: ColorsCode.primary_color),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    hintText: "Branch name",
-                    hintStyle: Style.text_hind_style,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: TextFormField(
+                    textInputAction: TextInputAction.next,
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Branch name",
+                      hintStyle: Style.text_hind_style,
+                    ),
                   ),
                 ),
               ),

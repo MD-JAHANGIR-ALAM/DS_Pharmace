@@ -114,7 +114,9 @@ class WalletPage extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            Navigator.pushNamed(context, "WithdrawPage");
+                          },
                           child: Container(
                             height: Get.height * .06,
                             width: Get.width / 2.3,

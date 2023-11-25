@@ -1,6 +1,7 @@
 import 'package:ds_pharmace/pages/staff_page/staff_list.dart';
 import 'package:ds_pharmace/pages/staff_page/staff_page.dart';
 import 'package:ds_pharmace/pages/transaction_page/transaction_page.dart';
+import 'package:ds_pharmace/pages/withdraw/withdraw_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'pages/create_branch/branch_list.dart';
@@ -39,6 +40,7 @@ class MyAPP extends StatelessWidget {
         'StaffList': (context) => StaffList(),
         'BranchList': (context) => BranchList(),
         'AddWallet': (context) => const AddWallet(),
+        'WithdrawPage': (context) => WithdrawPage(),
       },
       title: "DS Pharmacy",
       debugShowCheckedModeBanner: false,

@@ -27,11 +27,11 @@ class AddMedicine extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CustomText("Buying prize"),
+                    CustomText("Buying prize", 10),
                     Style.widthdistan_size5,
-                    CustomText("Selling prize"),
+                    CustomText("Selling prize", 10),
                     Style.widthdistan_size5,
-                    CustomText("Quantily"),
+                    CustomText("Quantily", 10),
                   ],
                 ),
               ),

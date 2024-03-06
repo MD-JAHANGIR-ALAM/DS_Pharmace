@@ -1,3 +1,4 @@
+import 'package:ds_pharmace/pages/login/login_view.dart';
 import 'package:ds_pharmace/pages/staff_page/staff_list.dart';
 import 'package:ds_pharmace/pages/staff_page/staff_page.dart';
 import 'package:ds_pharmace/pages/transaction_page/transaction_page.dart';
@@ -28,7 +29,8 @@ class MyAPP extends StatelessWidget {
     return GetMaterialApp(
         initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => const LoginPage(),
+        'HomePage': (context) => const HomePage(),
         'Profile': (context) => const Profile_Info(),
         'CreateBranch': (context) => const CreateBranch(),
         'WalletPage': (context) => WalletPage(),

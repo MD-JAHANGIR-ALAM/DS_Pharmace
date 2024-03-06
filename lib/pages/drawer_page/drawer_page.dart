@@ -739,9 +739,8 @@ class _MainDrawerState extends State<MainDrawer> {
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
-                    ),
+                    ), backgroundColor: const Color(0xff128041),
                     fixedSize: const Size(120, 25),
-                    primary: const Color(0xff128041),
                   ),
                   onPressed: () {
                   },
@@ -758,9 +757,8 @@ class _MainDrawerState extends State<MainDrawer> {
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
-                    ),
+                    ), backgroundColor: const Color(0xe6f61b1b),
                     fixedSize: const Size(120, 25),
-                    primary: const Color(0xe6f61b1b),
                   ),
                   onPressed: () {
                     Get.back();
